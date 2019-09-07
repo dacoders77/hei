@@ -1,0 +1,19 @@
+@mixin background-chevron-right($color: $black) {
+  $rgb: 'rgb%28#{round(red($color))}, #{round(green($color))}, #{round(blue($color))}%29';
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' viewBox='0 0 6 11' width='6' height='11'><path d='M1 .2c.1 0 .2 0 .2.1L5.9 5c0 .1.1.1.1.2s0 .2-.1.2l-4.7 4.7c-.1.1-.1.1-.2.1s-.2 0-.2-.1l-.6-.5s-.1-.1-.1-.2 0-.2.1-.2l3.9-3.9-3.9-4c0-.1-.1-.2-.1-.3C.1.9.1.8.2.8L.7.3C.8.2.9.2 1 .2z' style='fill: #{$rgb}'/></svg>");
+}
+
+@mixin background-chevron-left($color: $black) {
+  $rgb: 'rgb%28#{round(red($color))}, #{round(green($color))}, #{round(blue($color))}%29';
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' viewBox='0 0 6 11' width='6' height='11'><path d='M5.1 10.2c-.1 0-.2 0-.2-.1L.2 5.4c-.1 0-.1-.1-.1-.2s0-.2.1-.2L4.9.3c0-.1.1-.1.2-.1s.2 0 .2.1l.5.5c.1.1.1.1.1.2s0 .2-.1.2l-3.9 4 3.9 3.9c.1.1.1.1.1.2s0 .2-.1.2l-.5.5c-.1.2-.1.2-.2.2z' style='fill: #{$rgb}'/></svg>");
+}
+
+@mixin background-chevron-down($color: $black) {
+  $rgb: 'rgb%28#{round(red($color))}, #{round(green($color))}, #{round(blue($color))}%29';
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' viewBox='0 0 11 6' width='11' height='6'><path d='M10.4.9c0 .1 0 .2-.1.2L5.7 5.8c-.1.1-.2.1-.3.1s-.2 0-.2-.1L.5 1.1C.4 1.1.4 1 .4.9S.4.7.5.7L1 .2c.1-.1.1-.1.2-.1s.2 0 .2.1l3.9 3.9L9.2.2c.1-.1.1-.1.2-.1s.2 0 .2.1l.5.5c.3 0 .3.1.3.2z' style='fill: #{$rgb}'/></svg>");
+}
+
+@mixin background-chevron-up($color: $black) {
+  $rgb: 'rgb%28#{round(red($color))}, #{round(green($color))}, #{round(blue($color))}%29';
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' viewBox='0 0 11 6' width='11' height='6'><path d='M.4 5.1c0-.1 0-.2.1-.2L5.2.2c.1-.1.1-.1.2-.1s.2 0 .2.1l4.7 4.7c.1.1.1.1.1.2s0 .2-.1.2l-.5.5c0 .1-.1.1-.2.1s-.2 0-.2-.1l-4-3.9-3.9 3.9c-.1.1-.2.1-.3.1-.1 0-.2 0-.2-.1l-.5-.5c-.1-.1-.1-.1-.1-.2z' style='fill: #{$rgb}'/></svg>");
+}

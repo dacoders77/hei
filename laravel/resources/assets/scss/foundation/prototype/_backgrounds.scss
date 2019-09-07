@@ -1,0 +1,28 @@
+
+// Transfers the colors in the `$foundation-palette` map into classes for background colors
+@mixin background-colors() {
+  @each $name, $color in $foundation-palette {
+    .bg-#{$name} {
+      background-color: $color;
+    }
+  }
+
+  .bg-light-gray {
+    background-color: $light-gray;
+  }
+  .bg-medium-gray {
+    background-color: $medium-gray;
+  }
+  .bg-dark-gray {
+    background-color: $dark-gray;
+  }
+  .bg-body {
+    // background-color: $body-background;
+  }
+  .bg-black {
+    background-color: $black;
+  }
+  .bg-white {
+    background-color: $white;
+  }
+}

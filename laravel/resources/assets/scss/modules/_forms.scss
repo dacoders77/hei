@@ -1,0 +1,171 @@
+/* Hide HTML5 Up and Down arrows. */
+input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+select {
+	@include background-chevron-down($primary-color);
+	background-size: 11px 6px;
+
+	margin-bottom: 0;
+}
+
+form label.error {
+	color: $warning-color;
+	font-size: 0.66667rem;
+	line-height: 0.8rem;
+	margin-top: 0.2rem;
+}
+
+.input-group {
+	+ .error {
+	    margin-top: -0.66rem;
+	    margin-bottom: 1rem;
+	}
+}
+
+#pdetails_form {
+	input {
+		&[type="radio"] {
+			display: none;
+
+			& + span {
+				@include button(true, $white, $medium-gray, $black);
+				text-transform: none;
+				font-size: 20px;
+				line-height: 24px;
+				color: $primary-color !important;
+
+				&:hover {
+					background-color: $white;
+				}
+			}
+
+			&:checked {
+				& + span {
+					background-color: $primary-color;
+					color: $white !important;
+				}
+			}
+		}
+	}
+
+	label {
+		color: $form-label-color;
+		margin-bottom: 0;
+	}
+}
+
+.withdraw-wrapper {
+	// background-color: $light-gray;
+	padding: 1.5rem 1rem;
+
+	@include breakpoint(large) {
+		padding: rem-calc(37 42 22 42);
+	}
+
+	.withdraw-title {
+		font-family: $circular-black;
+		margin-bottom: rem-calc(14);
+	}
+
+	.withdraw-amount {
+		font-family: $open-sans;
+		// display: inline-block;
+		vertical-align: middle;
+		text-align: left;
+		margin-bottom: 0;
+		font-weight: 800;
+	}
+
+	hr {
+		border-bottom: 1px solid #979797;
+		margin: rem-calc(35 0);
+	}
+
+	label {
+		font-family: $circular-book;
+		font-weight: normal;
+	}
+
+	label[for="claim_receipt"].button {
+	    white-space: nowrap;
+	    overflow: hidden;
+	    text-transform: none;
+	    border: 3px solid;
+	    position: relative;
+	    text-align: left;
+	    padding: rem-calc(13) rem-calc(15);
+	    font-size: 15px;
+
+	    small {
+	    	position: absolute;
+	    	right: 12px;
+	    	top: 15px;
+	    	color: #e44047;
+	    }
+
+	    span {
+	    	&.filename {
+			    display: inline-block;
+			    max-width: calc(100% - 36px);
+			    white-space: nowrap;
+			    overflow: hidden;
+			    text-overflow: ellipsis;
+			    vertical-align: top;
+			    text-align: right;
+			}
+			&.fileext {
+			    display: inline-block;
+			    width: 36px;
+			    vertical-align: top;
+			    text-align: left;
+			}
+		}
+	}
+
+	.input-group-label {
+		border-color: $medium-gray;
+		background-color: $white;
+		width: 45px;
+	    padding-left: 15px;
+	    padding-right: 5px;
+
+		+ .input-group-field {
+			border-left-width: 0;
+		}
+	}
+
+	input:not(.button) {
+		background-color: $white;
+		border-color: $medium-gray;
+	}
+
+	.claim_form__title {
+		font-family: $circular-black;
+		margin-bottom: rem-calc(30);
+	}
+
+	.claim_form__max-litres {
+		font-size: rem-calc(12);
+		margin-bottom: 0;
+	}
+
+	.claim_form__submit {
+		margin-top: rem-calc(15);
+
+		@include breakpoint(medium) {
+			margin-top: rem-calc(35);
+		}
+	}
+}
+
+#withdraw_form2 {
+	.button {
+		padding: rem-calc(15 50);
+	}
+}

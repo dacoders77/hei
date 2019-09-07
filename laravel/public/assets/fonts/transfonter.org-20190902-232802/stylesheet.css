@@ -1,0 +1,48 @@
+@font-face {
+    font-family: 'Heineken Serif 18';
+    src: url('HeinekenSerif18-Bold.eot');
+    src: url('HeinekenSerif18-Bold.eot?#iefix') format('embedded-opentype'),
+        url('HeinekenSerif18-Bold.woff2') format('woff2'),
+        url('HeinekenSerif18-Bold.woff') format('woff'),
+        url('HeinekenSerif18-Bold.ttf') format('truetype'),
+        url('HeinekenSerif18-Bold.svg#HeinekenSerif18-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Heineken Serif 18';
+    src: url('HeinekenSerif18-Regular.eot');
+    src: url('HeinekenSerif18-Regular.eot?#iefix') format('embedded-opentype'),
+        url('HeinekenSerif18-Regular.woff2') format('woff2'),
+        url('HeinekenSerif18-Regular.woff') format('woff'),
+        url('HeinekenSerif18-Regular.ttf') format('truetype'),
+        url('HeinekenSerif18-Regular.svg#HeinekenSerif18-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Heineken Serif 18';
+    src: url('HeinekenSerif18-Bold_1.eot');
+    src: url('HeinekenSerif18-Bold_1.eot?#iefix') format('embedded-opentype'),
+        url('HeinekenSerif18-Bold_1.woff2') format('woff2'),
+        url('HeinekenSerif18-Bold_1.woff') format('woff'),
+        url('HeinekenSerif18-Bold_1.ttf') format('truetype'),
+        url('HeinekenSerif18-Bold_1.svg#HeinekenSerif18-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Heineken Serif 18';
+    src: url('HeinekenSerif18-Medium.eot');
+    src: url('HeinekenSerif18-Medium.eot?#iefix') format('embedded-opentype'),
+        url('HeinekenSerif18-Medium.woff2') format('woff2'),
+        url('HeinekenSerif18-Medium.woff') format('woff'),
+        url('HeinekenSerif18-Medium.ttf') format('truetype'),
+        url('HeinekenSerif18-Medium.svg#HeinekenSerif18-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+}
+

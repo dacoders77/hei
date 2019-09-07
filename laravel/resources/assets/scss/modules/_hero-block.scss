@@ -1,0 +1,69 @@
+.hero-block {
+	background-size: cover !important;
+	background-position: center center !important;
+	min-height: rem-calc(450);
+	background-color: $light-gray;
+
+	&:before {
+		content: '';
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(#000, 0.2);
+		z-index: 1;
+
+		@include breakpoint(medium) {
+			content: none !important;
+		}
+	}
+
+	@include breakpoint(large) {
+		height: 100vh;
+		min-height: 100vh;
+	}
+
+	& #{&}__caption {
+		text-align: center;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		z-index: 2;
+
+		@include breakpoint(medium) {
+			transform: none;
+			top: 0;
+			left: 0;
+			padding: 2rem 3rem;
+			text-align: left;
+		}
+	}
+
+	& #{&}__logo {
+		max-width: rem-calc(120);
+	}
+
+	& #{&}__footer {
+		text-align: center;
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		padding: 3rem 3rem;
+		z-index: 2;
+
+		@include breakpoint(medium) {
+			transform: none;
+			bottom: 0;
+			left: 0;
+			text-align: left;
+		}
+
+		> img {
+			max-width: rem-calc(320);
+		}
+	}
+}

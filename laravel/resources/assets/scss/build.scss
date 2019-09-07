@@ -1,0 +1,44 @@
+/**
+ * Theme
+ * Imports a custom / modified version of Foundation by Zurb
+ * as a base and then uses it's custom modules, components, templates etc.
+ */
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat:600,800|Open+Sans:400,700,800);
+@import url(https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
+@import url(../fonts/circular-std-cufonfonts-webfont/style.css);
+@import url(../fonts/transfonter.org-20190213-043132/stylesheet.css);
+
+// Modified version of foundation, all base settings like
+// fonts, colour etc. should be modified in the settings.scss file
+@import 'foundation/foundation';
+@include foundation-everything;
+
+// Other custom code specific to the project goes here
+
+// Helpers
+@import 'helpers/helper-classes';
+
+// Parts
+@import 'parts/footer';
+
+// Mixins
+@import 'modules/mixins';
+
+// Modules
+@import 'modules/hero-block';
+@import 'modules/hero-header';
+@import 'modules/form-tabs';
+@import 'modules/tooltipster';
+@import 'modules/datepicker';
+
+@import 'modules/forms';
+@import 'modules/claims-table';
+@import 'modules/profile-details';
+
+// Misc
+body:not(.template--landing) {
+	section.content {
+		padding-top: 4rem;
+	}
+}

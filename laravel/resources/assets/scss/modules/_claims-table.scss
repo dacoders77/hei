@@ -1,0 +1,132 @@
+#claims__history {
+	.claims__history__title {
+		@include breakpoint(medium) {
+			margin-bottom: 0;
+			vertical-align: middle;
+		}
+	}
+	ul.list {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+
+		li {
+			padding: rem-calc(20 0);
+			margin-bottom: 0.5rem;
+			background-color: $white;
+			border: 1px solid $dark-gray;
+			border-radius: 2px;
+
+			i.fa {
+				color: get-color(alternative);
+			}
+
+			&.pending {
+				// border-color: get-color(primary);
+			}
+
+			&.rejected {
+				// border-color: get-color(primary);
+
+				.status {
+					font-weight: 600;
+				}
+			}
+
+			&.approved {
+				border-width: 0;
+				background-color: $secondary-color;
+			}
+
+			&.completed {
+				border-width: 0;
+				background-color: rgba($medium-gray,0.5);
+			}
+
+			.list__item {
+				margin-bottom: 1rem;
+
+				&:last-child {
+					margin-bottom: 0;
+				}
+
+				@include breakpoint(medium down) {
+					text-align: left;
+				}
+
+				@include breakpoint(medium) {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+
+	ul.mini-pagination {
+		list-style: none;
+		padding: 0;
+
+		@include breakpoint(medium down) {
+			text-align: center;
+			margin-left: 0;
+		}
+
+		li {
+			display: inline-block;
+			padding: 0 15px;
+			vertical-align: middle;
+			color: #333;
+
+			a {
+				display: inline-block;
+				width: 10px;
+				height: 23px;
+				vertical-align: text-top;
+
+				&.disabled {
+					opacity: 0.5;
+					cursor: default;
+				}
+			}
+
+			&:first-child {
+				a {
+					@include background-chevron-left($primary-color);
+					background-position: center center;
+					background-size: contain;
+					background-repeat: no-repeat;
+				}
+			}
+
+			&:last-child {
+				@include breakpoint(medium) {
+					padding-right: 0;
+				}
+
+				a {
+					@include background-chevron-right($primary-color);
+					background-position: center center;
+					background-size: contain;
+					background-repeat: no-repeat;
+				}
+			}
+		}
+	}
+}
+
+.claim__history__withdraw {
+	h1 {
+		margin-bottom: 0;
+	}
+
+	ul.list-inline {
+		margin-bottom: 0;
+
+		> li {
+			font-family: $circular-black;
+
+			h1 {
+				font-family: $circular-black;
+			}
+		}
+	}
+}

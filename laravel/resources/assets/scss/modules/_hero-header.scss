@@ -1,0 +1,131 @@
+.hero-header {
+	background-size: cover !important;
+	background-position: center center !important;
+	height: rem-calc(350);
+	background-color: $medium-gray;
+	color: $white;
+	position: relative;
+
+	@include breakpoint(medium) {
+		height: rem-calc(300);
+	}
+
+	&::before {
+		content: '';
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(#000, 0.2);
+		z-index: 1;
+
+		@include breakpoint(medium) {
+			content: none !important;
+		}
+	}
+
+	& #{&}__inner {
+		height: rem-calc(350);
+		position: relative;
+		z-index: 2;
+
+		@include breakpoint(medium) {
+			height: rem-calc(300);
+		}
+	}
+
+	& #{&}__logo {
+		text-align: center;
+		margin-top: rem-calc(30);
+		margin-bottom: rem-calc(30);
+
+		> img {
+			max-width: rem-calc(120);
+		}
+
+		@include breakpoint(medium) {
+			margin-top: 0;
+			margin-bottom: 0;
+			position: absolute;
+			transform: none;
+			top: 0;
+			left: 0;
+			padding: 2rem 0.9375rem;
+			text-align: left;
+		}
+	}
+
+	& #{&}__support {
+		text-align: center;
+		position: absolute;
+		bottom: 10%;
+		// right: 50%;
+		// transform: translate(-50%, 50%);
+		width: 100%;
+
+		@include breakpoint(medium) {
+			width: auto;
+			transform: none;
+			bottom: auto;
+			top: 0;
+			right: 0;
+			padding-right: rem-calc(15);
+			text-align: left;
+		}
+
+		&__link {
+			color: inherit;
+			display: inline-block;
+			margin-right: rem-calc(10);
+			font-weight: 600;
+
+			@include breakpoint(medium) {
+				margin-right: 0;
+				padding: 1.5rem;
+				font-size: rem-calc(18);
+				font-family: $circular-bold;
+			}
+		}
+	}
+
+	& #{&}__caption {
+		text-align: center;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+
+		> h1 {
+			margin-bottom: 0;
+			font-family: $circular-black;
+			font-weight: 600;
+		}
+	}
+
+	& #{&}__footer {
+		display: none;
+		text-align: center;
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		z-index: 2;
+		padding: 2rem 2rem;
+
+		@include breakpoint(medium) {
+			display: block;
+		}
+		// 	transform: none;
+		// 	bottom: 0;
+		// 	left: 0;
+		// 	padding: 3rem 3rem;
+		// 	text-align: left;
+		// }
+
+		> img {
+			max-width: rem-calc(320);
+		}
+	}
+}

@@ -1,0 +1,5 @@
+.profile-details {
+	@include breakpoint(medium) {
+		text-align: center;
+	}
+}

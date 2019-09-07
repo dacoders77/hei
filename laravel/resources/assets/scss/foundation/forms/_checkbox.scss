@@ -1,0 +1,88 @@
+// Foundation for Sites by ZURB
+// foundation.zurb.com
+// Licensed under MIT Open Source
+
+////
+/// @group forms
+////
+
+@mixin foundation-form-checkbox {
+  [type='file'],
+  [type='checkbox'],
+  [type='radio'] {
+    //margin: 0 0 $form-spacing;
+  }
+
+  // Styles for input/label siblings
+  [type='checkbox'] + label,
+  [type='radio'] + label {
+    display: inline-block;
+    vertical-align: baseline;
+
+    margin-#{$global-left}: $form-spacing * 0.5;
+    margin-#{$global-right}: $form-spacing;
+    margin-bottom: 0;
+
+    &[for] {
+      cursor: pointer;
+    }
+  }
+
+  // Styles for inputs inside labels
+  label > [type='checkbox'],
+  label > [type='radio'] {
+    margin-#{$global-right}: $form-spacing * 0.5;
+  }
+
+  // Normalize file input width
+  [type='file'] {
+    width: 100%;
+  }
+}
+
+.checkbox {
+  position: relative;
+  padding-left: rem-calc(40);
+  padding-top: rem-calc(9);
+  vertical-align: middle;
+  font-size: rem-calc(15);
+
+  .check {
+    width: 30px;
+    height: 30px;
+    border-radius: 0; //$button-radius;
+    border: 1px solid;
+    border-color: rgba(0, 0, 0, 0.3);
+    border-radius: $global-radius;
+    display: inline-block;
+    transition: border-color 250ms ease, background-color 250ms ease;
+    position: absolute;
+    left: 0;
+    top: 7px;
+
+    > .fa-check {
+      transition: opacity 250ms ease;
+      position: absolute;
+      top: 48%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: $white;
+      font-size: 16px;
+    }
+  }
+
+  label.error {
+    display: block;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  input[type="checkbox"] {
+    display: none;
+
+    &:checked ~ .check {
+      background-color: $primary-color;
+      border-color: $primary-color;
+    }
+  }
+}

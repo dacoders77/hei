@@ -1,0 +1,67 @@
+.forms-block {
+	.forms-block__inner {
+		p {
+			margin-bottom: 0;
+		}
+	}
+}
+
+.forms-tabs {
+	margin: 0 auto;
+	padding: rem-calc(40 15);
+
+	@include breakpoint(medium) {
+		max-width: rem-calc(485);
+	}
+
+	@include breakpoint(large) {
+		padding: rem-calc(40 20);
+		// max-width: rem-calc(650);
+	}
+
+	.tabs {
+		border-width: 0;
+
+		.tabs-title {
+			> a {
+				padding: rem-calc(13 5);
+				height: 50px;
+				vertical-align: middle;
+				font-weight: 700;
+				font-size: rem-calc(20);
+				line-height: rem-calc(24);
+				border-radius: $global-radius;
+			}
+
+			&.active > a {
+				background-color: $tab-background-active;
+				color: $tab-active-color;
+				// color: $white;
+			}
+		}
+	}
+
+	.tabs-panel {
+		display: block;
+		padding: rem-calc(42 0 0 0);
+
+		label {
+			&.checkbox {
+				font-weight: $global-weight-normal;
+				color: $body-font-color;
+			}
+		}
+
+		.form-input.medium-6 {
+			// @include breakpoint(medium) {
+			// 	&:first-child {
+			// 		padding-rig
+			// 	}
+			// }
+		}
+	}
+
+	.form-tabs__submit {
+		margin-top: rem-calc(25);
+	}
+}

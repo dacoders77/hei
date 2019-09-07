@@ -1,0 +1,28 @@
+
+// Transfers the colors in the `$foundation-palette` map into classes for font colors
+@mixin text-colors() {
+  @each $name, $color in $foundation-palette {
+    .color-#{$name} {
+      color: $color;
+    }
+  }
+
+  .color-light-gray {
+    color: $light-gray;
+  }
+  .color-medium-gray {
+    color: $medium-gray;
+  }
+  .color-dark-gray {
+    color: $dark-gray;
+  }
+  .color-body {
+    color: $body-font-color;
+  }
+  .color-black {
+    color: $black;
+  }
+  .color-white {
+    color: $white;
+  }
+}

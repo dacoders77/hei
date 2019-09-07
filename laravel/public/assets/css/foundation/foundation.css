@@ -1,0 +1,62 @@
+/**
+ * Foundation for Sites by ZURB
+ * Version 6.4.3
+ * foundation.zurb.com
+ * Licensed under MIT Open Source
+ */
+.checkbox {
+  position: relative;
+  padding-left: 2.22222rem;
+  padding-top: 0.5rem;
+  vertical-align: middle;
+  font-size: 0.83333rem;
+}
+
+.checkbox .check {
+  width: 30px;
+  height: 30px;
+  border-radius: 0;
+  border: 1px solid;
+  border-color: rgba(0, 0, 0, 0.3);
+  border-radius: 2px;
+  display: inline-block;
+  transition: border-color 250ms ease, background-color 250ms ease;
+  position: absolute;
+  left: 0;
+  top: 7px;
+}
+
+.checkbox .check > .fa-check {
+  transition: opacity 250ms ease;
+  position: absolute;
+  top: 48%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fefefe;
+  font-size: 16px;
+}
+
+.checkbox label.error {
+  display: block;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.checkbox input[type="checkbox"] {
+  display: none;
+}
+
+.checkbox input[type="checkbox"]:checked ~ .check {
+  background-color: #333338;
+  border-color: #333338;
+}
+
+.form-input {
+  margin-bottom: 1rem;
+}
+
+.form-input label.error {
+  color: #FF6666;
+}
+
+/*# sourceMappingURL=foundation.css.map */

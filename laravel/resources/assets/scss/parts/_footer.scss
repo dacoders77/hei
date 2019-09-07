@@ -1,0 +1,19 @@
+.footer {
+	padding-top: rem-calc(45);
+	padding-bottom: rem-calc(45);
+	background-color: $footer-background;
+	color: $footer-font-color;
+	font-family: $open-sans;
+
+	& #{&}__disclaimer {
+		margin-bottom: 0;
+		line-height: 14px;
+		font-size: 12px;
+		letter-spacing: 0.03rem;
+		text-align: justify;
+
+		p {
+			margin-bottom: 0;
+		}
+	}
+}

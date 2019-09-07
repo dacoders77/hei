@@ -1,0 +1,24 @@
+@font-face {
+    font-family: 'Futura Condensed';
+    src: url('FuturaCondensed.eot');
+    src: url('FuturaCondensed.eot?#iefix') format('embedded-opentype'),
+        url('FuturaCondensed.woff2') format('woff2'),
+        url('FuturaCondensed.woff') format('woff'),
+        url('FuturaCondensed.ttf') format('truetype'),
+        url('FuturaCondensed.svg#FuturaCondensed') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Futura Condensed';
+    src: url('Futura-CondensedBold.eot');
+    src: url('Futura-CondensedBold.eot?#iefix') format('embedded-opentype'),
+        url('Futura-CondensedBold.woff2') format('woff2'),
+        url('Futura-CondensedBold.woff') format('woff'),
+        url('Futura-CondensedBold.ttf') format('truetype'),
+        url('Futura-CondensedBold.svg#Futura-CondensedBold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
