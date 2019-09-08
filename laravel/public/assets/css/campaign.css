@@ -1021,4 +1021,29 @@ ul.af_list li.af_footer {
   display: none !important;
 }
 
+#age-splash {
+  background-color: #fff;
+}
+
+#age-splash .form-link {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.claim-form__intro img {
+  display: inline-block;
+  vertical-align: middle;
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+}
+
+.claim-form__form {
+  background-color: #00851e;
+}
+
+.claim-conditional .text-black {
+  color: #000;
+}
+
 /*# sourceMappingURL=campaign.css.map */
