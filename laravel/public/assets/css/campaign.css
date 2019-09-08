@@ -1030,6 +1030,10 @@ ul.af_list li.af_footer {
   text-decoration: underline;
 }
 
+.claim-form__intro {
+  height: 100%;
+}
+
 .claim-form__intro img {
   display: inline-block;
   vertical-align: middle;
