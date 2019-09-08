@@ -59,12 +59,28 @@ Route::group(['namespace' => 'Campaigns'], function() {
 
 		Route::group(['domain' => $domain, 'middleware' => 'published'], function() use ($campaign) {
 
-            Route::get('dash', function () {
-                //return redirect('home/dashboard');
-                //return("<h1>web.php test route</h1>");
-                //return view('campaigns.index_1');
-                return view('campaigns.index_1', ['campaign' => \App\Model\Campaigns\Campaign::find(1)]);
-            })->name('dash');
+            Route::get('/pay', function () {
+                return view('campaigns.pages.stripe');
+            })->name('pay');
+
+            Route::post ( '/paygate', function (Request $request) {
+                \Stripe\Stripe::setApiKey ( 'test_SecretKey' );
+                try {
+                    \Stripe\Charge::create ( array (
+                        "amount" => 300 * 100,
+                        "currency" => "usd",
+                        "source" => $request->input ( 'stripeToken' ), // obtained with Stripe.js
+                        "description" => "Test payment."
+                    ) );
+                    Session::flash ( 'success-message', 'Payment done successfully !' );
+                    return Redirect::back ();
+                } catch ( \Exception $e ) {
+                    Session::flash ( 'fail-message', "Error! Please Try again." );
+                    return Redirect::back ();
+                }
+            } );
+
+
 
 			foreach ($campaign->routes as $route) {
 				// Setup Defaults

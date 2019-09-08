@@ -50,12 +50,13 @@ class SubmissionController_1 extends SubmissionController
         //LogToFile::add(__FILE__, print_r($request->all(), true));
 
         //LogToFile::add(__FILE__, file_get_contents("php://input")); // Show request body as text by PPP
-        parse_str(file_get_contents("php://input"), $a);
+        //parse_str(file_get_contents("php://input"), $a);
         //LogToFile::add(__FILE__, json_encode($a, JSON_PRETTY_PRINT)); // Works good
 
+        $data = $this->process_data( $request->all() );
+        LogToFile::add(__FILE__, json_encode($data, JSON_PRETTY_PRINT));
 
-        //$data = $this->process_data( $request->all() );
-        $data = $this->process_data($a);
+        //$data = $this->process_data($a);
 
 		// Setup Validation Fields
 		$validation = [
@@ -199,7 +200,8 @@ class SubmissionController_1 extends SubmissionController
 				}
 			}
 
-			if($this->exclusionList($data['payer_number'])) {
+			/* 08.09.19 Disabled by Boris. Testing */
+			/*if($this->exclusionList($data['payer_number'])) {
 				$validator->errors()->add('payer_number','Sorry this Customer Number is invalid.');
 			} else {
 				// Check against mobile
@@ -212,13 +214,14 @@ class SubmissionController_1 extends SubmissionController
 				if($checkPayerNumber >= 4) {
 					$validator->errors()->add('payer_number','Limit of 4 entries per Customer Number.');
 				}
-			}
+			}*/
 
 
 			// Check Invoice Total
-			if(floatval(preg_replace('/[^0-9\.]+/', '', $data['invoice_total'])) < 250) {
+            /* 08.09.19 Disabled by Boris. Testing */
+			/*if(floatval(preg_replace('/[^0-9\.]+/', '', $data['invoice_total'])) < 250) {
 				$validator->errors()->add('invoice_total','Invoice Total needs to be $250 or above');
-			}
+			}*/
 
 			if($validate_autocomplete_address) {
 				foreach ($validator->errors()->toArray() as $key => $value) {
@@ -245,7 +248,8 @@ class SubmissionController_1 extends SubmissionController
         }
 
         // Reformat Invoice Total
-        $data['invoice_total'] = '$'.preg_replace('/([0-9]{2})$/','.$1',intval(floatval(preg_replace('/[^0-9\.]+/', '', $data['invoice_total']))*100));
+        /* 08.09.19 Disabled by Boris. Testing */
+        /*$data['invoice_total'] = '$'.preg_replace('/([0-9]{2})$/','.$1',intval(floatval(preg_replace('/[^0-9\.]+/', '', $data['invoice_total']))*100));*/
 
         // Reformat Phone Number
         $data['phone'] = preg_replace('/^04/','+614',preg_replace('/[^0-9]+/', '', $data['phone']));
