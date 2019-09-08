@@ -89,7 +89,7 @@
     </div>
 
     <!-- Second step -->
-    <div class="page-wrapper hide">
+    <div class="page-wrapper hide" id="age-splash1">
         <div style="border: 0px solid blue; text-align: center; padding: 30px">
             <img src="{{ asset('assets/images/H/58480a5fcef1014c0b5e4919-1.png') }}" alt="Heineken logo" width="200" height="110" class="hlogo">
         </div>
@@ -111,7 +111,7 @@
     </div>
 
  <!-- Third step -->
-    <div class="page-wrapper hide">
+    <div class="page-wrapper hide" id="age-splash3">
         <div style="border: 0px solid blue; text-align: center; padding: 30px">
              <img src="{{ asset('assets/images/H/58480a5fcef1014c0b5e4919-1.png') }}" alt="Heineken logo" width="200" height="110" class="hlogo">
         </div>

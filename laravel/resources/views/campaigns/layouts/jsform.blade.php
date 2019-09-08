@@ -360,7 +360,7 @@
 
 	<div class="row padding-top padding-bottom form-submit">
 		<div class="small-12 columns">
-			<input id="submit222" type="submit" value="Submit" class="wizard-finish button primary">
+			<input id="submit" type="submit" value="Submit" class="wizard-finish button primary">
 			<a href="javascript:void(0);" class="button primary hide" id="submit_working"><i class="fa fa-refresh fa-spin"></i></a>
 		</div>
 	</div>

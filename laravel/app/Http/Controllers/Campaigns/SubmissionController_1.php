@@ -50,11 +50,12 @@ class SubmissionController_1 extends SubmissionController
         //LogToFile::add(__FILE__, print_r($request->all(), true));
 
         //LogToFile::add(__FILE__, file_get_contents("php://input")); // Show request body as text by PPP
-        parse_str(file_get_contents("php://input"), $a);
+        //parse_str(file_get_contents("php://input"), $a);
         //LogToFile::add(__FILE__, json_encode($a, JSON_PRETTY_PRINT)); // Works good
 
-
         $data = $this->process_data( $request->all() );
+        LogToFile::add(__FILE__, json_encode($data, JSON_PRETTY_PRINT));
+
         //$data = $this->process_data($a);
 
 		// Setup Validation Fields
@@ -199,7 +200,7 @@ class SubmissionController_1 extends SubmissionController
 				}
 			}
 
-            // Disabled 08.09.19 due to this field's absence in Software Specifications, page 12
+			/* 08.09.19 Disabled by Boris. Testing */
 			/*if($this->exclusionList($data['payer_number'])) {
 				$validator->errors()->add('payer_number','Sorry this Customer Number is invalid.');
 			} else {
@@ -217,11 +218,10 @@ class SubmissionController_1 extends SubmissionController
 
 
 			// Check Invoice Total
-            
-            // Validation disabled 08.09.19 due to this field's absence in Software Specifications, page 12
-			//if(floatval(preg_replace('/[^0-9\.]+/', '', $data['invoice_total'])) < 250) {
-			//	$validator->errors()->add('invoice_total','Invoice Total needs to be $250 or above');
-			//}
+            /* 08.09.19 Disabled by Boris. Testing */
+			/*if(floatval(preg_replace('/[^0-9\.]+/', '', $data['invoice_total'])) < 250) {
+				$validator->errors()->add('invoice_total','Invoice Total needs to be $250 or above');
+			}*/
 
 			if($validate_autocomplete_address) {
 				foreach ($validator->errors()->toArray() as $key => $value) {
@@ -248,8 +248,8 @@ class SubmissionController_1 extends SubmissionController
         }
 
         // Reformat Invoice Total
-        // Disabled 08.09.19 due to this field's absence in Software Specifications, page 12
-        //$data['invoice_total'] = '$'.preg_replace('/([0-9]{2})$/','.$1',intval(floatval(preg_replace('/[^0-9\.]+/', '', $data['invoice_total']))*100));
+        /* 08.09.19 Disabled by Boris. Testing */
+        /*$data['invoice_total'] = '$'.preg_replace('/([0-9]{2})$/','.$1',intval(floatval(preg_replace('/[^0-9\.]+/', '', $data['invoice_total']))*100));*/
 
         // Reformat Phone Number
         $data['phone'] = preg_replace('/^04/','+614',preg_replace('/[^0-9]+/', '', $data['phone']));
@@ -400,25 +400,23 @@ class SubmissionController_1 extends SubmissionController
 	        		}
 	    		}
 
-                // Disabled 08.09.19 due to this field's absence in Software Specifications, page 12
-	    		/*if(!$isPayer) {
+	    		if(!$isPayer) {
 	    			foreach ($ocrArray as $i => $line) {
 	    				if(preg_replace('/[^0-9]+/', '', $line) == $data['payer_number']) {
 	    					$isPayer = preg_replace('/[^0-9]+/', '', $line);
 	    					break;
 	    				}
 	    			}
-	    		}*/
+	    		}
 
-                // Disabled 08.09.19 due to this field's absence in Software Specifications, page 12
-	    		/*if(!$isTotal) {
+	    		if(!$isTotal) {
 	    			foreach ($ocrArray as $i => $line) {
 	    				if('$'.preg_replace('/[^0-9\.]+/', '', $line) == $data['invoice_total']) {
 	    					$isTotal = '$'.preg_replace('/[^0-9\.]+/', '', $line);
 	    					break;
 	    				}
 	    			}
-	    		}*/
+	    		}
 
 	    		if(!$isTotal) {
 		    		// Check
@@ -565,14 +563,12 @@ class SubmissionController_1 extends SubmissionController
         }
 
         // Additional Validations
-        // Disabled 08.09.19 due to this field's absence in Software Specifications, page 12
-		/*if($receiptData['payer'] && $receiptData['payer'] !== $data['payer_number']) {
+		if($receiptData['payer'] && $receiptData['payer'] !== $data['payer_number']) {
 			$data['flag_payer_number'] = 'OCR Customer Number reads '.$receiptData['payer'].'.';
 			$data['flag_color'] = 'red';
-		}*/
+		}
 
-        // Disabled 08.09.19 due to this field's absence in Software Specifications, page 12
-		/*if($receiptData['payer']) {
+		if($receiptData['payer']) {
 			$checkPayerNumber = Submission::where('campaign_id',$id)
 				->whereMetaValue([
 					['status','REGEXP','^[1-9]$'],
@@ -583,7 +579,7 @@ class SubmissionController_1 extends SubmissionController
 				$data['flag_payer_number'] = 'OCR Customer Number reads '.$receiptData['payer'].' and has reached the 4 entry limit.';
 				$data['flag_color'] = 'red';
 			}
-		}*/
+		}
 
 		if($receiptData['payer'] && $this->exclusionList($receiptData['payer'])) {
 			$data['flag_payer_number'] = 'OCR Customer Number was found in the exclusion list!';
@@ -595,13 +591,10 @@ class SubmissionController_1 extends SubmissionController
 			if(floatval(preg_replace('/[^0-9\.]+/', '', $receiptData['total'])) < 250) {
 				$data['flag_invoice_total'] = 'OCR Invoice Total reads '.$receiptData['total'].', which is below $250.';
 				$data['flag_color'] = 'red';
-			} 
-            
-            // Disabled 08.09.19 due to this field's absence in Software Specifications, page 12
-            /*else if(floatval(preg_replace('/[^0-9\.]+/', '', $receiptData['total'])) !== floatval(preg_replace('/[^0-9\.]+/', '', $data['invoice_total']))) {
+			} else if(floatval(preg_replace('/[^0-9\.]+/', '', $receiptData['total'])) !== floatval(preg_replace('/[^0-9\.]+/', '', $data['invoice_total']))) {
 				$data['flag_invoice_total'] = 'OCR Invoice Total reads '.$receiptData['total'].'.';
 				$data['flag_color'] = 'red';
-			}*/
+			}
 		}
 
 		// Check Invoice Date
