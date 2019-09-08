@@ -19,7 +19,7 @@
         "mobiledetect/mobiledetectlib": "^2.8",
         "msurguy/honeypot": "^1.0",
         "rap2hpoutre/laravel-log-viewer": "^1.1",
-        "stripe/stripe-php": "^6.30",
+        "stripe/stripe-php": "^7.0",
         "thiagoalessio/tesseract_ocr": "^2.7",
         "verschuur/laravel-robotstxt": "^1.1"
     },
