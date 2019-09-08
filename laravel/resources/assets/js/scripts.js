@@ -215,15 +215,11 @@ jQuery(document).ready(function($) {
 		},
 	    submitHandler: function(form) {
 
-			alert('Submit scripts.js clicked 3667');
+			// alert('Submit scripts.js clicked 3667');
 
 			$(form).find('#submit_working').removeClass('hide');
 			$(form).find('#submit').addClass('hide');
 
-            //$(form).find('#age-splash3').removeClass('hide');
-            $("#age-splash3").attr("class", "page-wrapper"); // step 3 show
-            $(form).find('#age-splash2').empty(); // step 2 hide
-			
 			var formData;
 
 			if( $(form).find('input[type="file"][name]').length ) {
@@ -251,7 +247,7 @@ jQuery(document).ready(function($) {
 				contentType: formData.contentType,
 				success: function(data,status,xhr){
 
-					alert('Success from scripts.js! form sent! 778899');
+					// alert('Success from scripts.js! form sent! 778899');
 
 					$(form).trigger('reset');
 					$(form).find(':input').trigger('change');
@@ -259,21 +255,21 @@ jQuery(document).ready(function($) {
 					$(form).find('#submit_working').addClass('hide');
 					$(form).find('#submit').removeClass('hide');
 
-
                     $(form).find('#age-splash2').addClass('hide'); // Hide step 2
-
 
 					//$(form).find('.thank-you').html('<h3 class="text-center text-uppercase">THANK YOU FOR ENTERING!</h3><p class="text-center">Your claim will be validated within 2 business days and you will receive an email letting you know if it has been approved.</p>');
 					$(form).find('#tt55').html('<h3 class="text-center text-uppercase">THANK YOU FOR ENTERING!</h3><p class="text-center">Your claim will be validated within 2 business days and you will receive an email letting you know if it has been approved.</p>');
 					$(form).find('.thank-you').hide().removeClass('hide').removeClass('padding-bottom').addClass('padding-top--2x').fadeIn(300);
 
-                    $(form).find('#div33').removeClass('hide');
 					// $(window).scrollTop(0);
+
+                    $('#age-splash3').removeClass('hide'); // Step 3 show
+                    $('#age-splash1').addClass('hide'); // step 2 hide
 				},
 				error: function(xhr,status,error){
 					$(form).find('#submit_working').addClass('hide');
-					//$(form).find('#submit').removeClass('hide');
-                    alert('Error from scripts.js! form sent! 56843');
+
+                    //alert('Error from scripts.js! form sent! 56843');
 
 					if(xhr.responseJSON.errors) {
 
@@ -293,7 +289,7 @@ jQuery(document).ready(function($) {
 						},300);
 
 					} else {
-						alert('Oops9899! There seems to have been an error. Please try again.');
+						alert('Oops: 9899! There seems to have been an error. Please try again.');
 					}
 				},
 			});

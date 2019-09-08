@@ -137,6 +137,7 @@ class Submission extends Model
      *
      * @param  array  $meta
      * @return this
+     * @throws
      */
     public function updateMeta($meta) {
         if(!is_array($meta)&&!is_object($meta)) {
@@ -151,7 +152,6 @@ class Submission extends Model
             $s->meta_value = $value;
             $s->save();
         }
-
         return $this;
     }
 }
