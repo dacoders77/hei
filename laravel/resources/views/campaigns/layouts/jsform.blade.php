@@ -13,10 +13,6 @@
 	]
 ) }}
 
-<div style="color:chocolate">
-	<h1 id="tt55" >JOPA from jsform.blade.php</h1>
-</div>
-
 	{{-- Include Honeypot --}}
 	@honeypot
 

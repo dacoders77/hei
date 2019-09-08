@@ -17,7 +17,7 @@
             <div class="large-8 large-offset-2 columns">
 
                 <div style="border: 0px solid blue; text-align: center; padding: 30px">
-                    <img src="{{ asset('assets/images/H/HeinekenLogo_Stacked_01.png') }}" alt="" width="150" class="hlogo">
+                    <img src="{{ asset('assets/images/H/58480a5fcef1014c0b5e4919-1.png') }}" alt="" width="200" height="110" class="hlogo">
                 </div>
 
                 <!-- Border -->
@@ -73,7 +73,7 @@
 
                         <div class="row">
                             <div class="columns small-12 padding-top">
-                                <p class="text-center disclaimer">By submitting this form, you opt into Heineken<sup>&reg;</sup> <a href="#" target="_blank">Privacy Policy</a>.</p>
+                                <p class="text-center disclaimer">By submitting this form, you opt into Heineken<sup>&reg;</sup> <a href="#" target="_blank" class="form-link ">Privacy Policy</a>.</p>
                             </div>
                         </div>
 
@@ -90,14 +90,41 @@
 
     <!-- Second step -->
     <div class="page-wrapper hide">
-        <h1 style="color: red; background-color: lightblue">index_1.blade.php div2 submit claim</h1>
-
-        @include('campaigns.layouts.jsform',['formRoute'=>['campaign_'.$campaign->id.'.submissions.store',$campaign->id]])
-
+        <div style="border: 0px solid blue; text-align: center; padding: 30px">
+            <img src="{{ asset('assets/images/H/58480a5fcef1014c0b5e4919-1.png') }}" alt="Heineken logo" width="200" height="110" class="hlogo">
+        </div>
+        <div class="claim-form row padding-horizontal-1">
+        <div class="columns small-12 medium-6 padding-1">
+            <div class="claim-form__intro">
+                <img src="{{ asset('assets/images/H/claim_form.jpg') }}" alt="" width="480" height="635" class="claim-form-img">
+            </div>
+            </div>
+            <div class="columns small-12 medium-6 padding-1">
+           <div class="claim-form__form padding-right">
+                <div class="form-wrapper">
+                    <h1 class="claim-form__title margin-bottom-2 text-center"> Claim form</h1>
+                    @include('campaigns.layouts.jsform',['formRoute'=>['campaign_'.$campaign->id.'.submissions.store',$campaign->id]])
+                </div>
+            </div>
+            </div>
+        </div>
     </div>
 
+ <!-- Third step -->
     <div class="page-wrapper hide">
-        <h1>index_1.blade.php div3</h1>
+        <div style="border: 0px solid blue; text-align: center; padding: 30px">
+             <img src="{{ asset('assets/images/H/58480a5fcef1014c0b5e4919-1.png') }}" alt="Heineken logo" width="200" height="110" class="hlogo">
+        </div>
+        <div class="row claim-conditional">
+            <div class="columns small-12 medium-12">
+                 <img src="{{ asset('assets/images/H/claim_confirmation.jpg') }}" alt="" width="100%" >
+            </div>
+            <div class="columns small-12 medium-12 padding-3 ma">
+                <h2 class="text-center text-black margin-bottom-2">We’ve received your claim</h2>
+                <p class="text-center text-black">Thank you for submitting your claim. Your claim will be reviewed and approved within 2 days. You will then be sent an email with further instructions outlining how to process payment for your UE BLAST Speaker. </p>
+                <p class="text-center text-black">If you don’t receive an email please check your Junk and Spam folders. If you still can’t find it please Contact Us.</p>
+            </div>
+        </div>
     </div>
 
 
