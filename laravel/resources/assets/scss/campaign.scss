@@ -1020,3 +1020,34 @@ ul.af_list {
 		}
 	}
 }
+
+#age-splash {
+    background-color: $white;
+
+    .form-link {
+        color: $white;
+        text-decoration: underline;
+    }
+}
+
+.claim-form {
+    &__intro {
+        img {
+            display: inline-block;
+            vertical-align: middle;
+            max-width: 100%;
+            width: 100%;
+            height: auto;
+        }
+    }
+    &__form {
+        background-color: $green-dark;
+    }
+}
+
+.claim-conditional {
+
+    .text-black {
+        color: $black;
+    }
+}
