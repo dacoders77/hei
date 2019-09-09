@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Http\Request;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,9 +16,9 @@
 /**
  *
  * Generate sitemap.xml
- *
+ * 09.09.2019 Boris. Disabled. Testing.
  */
-Route::get('sitemap.xml',function(){
+/*Route::get('sitemap.xml',function(){
 	$xml = new \SimpleXMLElement("<?xml version=\"1.0\"?><urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\"></urlset>");
 
 	// Add home path by default
@@ -32,9 +33,8 @@ Route::get('sitemap.xml',function(){
 		}
 
 	}
-
 	return response($xml->asXML(), 200)->header('Content-Type', 'text/xml');
-});
+});*/
 
 
 /**
@@ -60,29 +60,37 @@ Route::group(['namespace' => 'Campaigns'], function() {
 		Route::group(['domain' => $domain, 'middleware' => 'published'], function() use ($campaign) {
 
 
+
             /**
-             * @TODO DELETE!
+             * @TODO DELETE! TEST ROUTES! Add everthing to config/campaigns.php
              */
-            Route::get('/pay', function () {
+            Route::get('/payform', function () {
                 return view('campaigns.pages.stripe');
             })->name('pay');
 
-            Route::post ( '/paygate', function (Request $request) {
-                \Stripe\Stripe::setApiKey ( 'test_SecretKey' );
+            // 4737029104467395
+
+            Route::post('/pay', function (Request $request) {
+                \Stripe\Stripe::setApiKey( 'sk_test_nLvUlYB8B0PgTbIyVobHYhpC00dQ5NfRng');
                 try {
-                    \Stripe\Charge::create ( array (
-                        "amount" => 300 * 100,
-                        "currency" => "usd",
-                        "source" => $request->input ( 'stripeToken' ), // obtained with Stripe.js
-                        "description" => "Test payment."
-                    ) );
+                    $response =
+                        \Stripe\Charge::create ( array (
+                            "amount" => 300 * 100,
+                            "currency" => "usd",
+                            "source" => $request->input( 'stripeToken'), // obtained in Stripe.blade.php in script section
+                            "description" => "Test payment."
+                        ));
+
                     Session::flash ( 'success-message', 'Payment done successfully !' );
-                    return Redirect::back ();
-                } catch ( \Exception $e ) {
+                    //return Redirect::back();
+                    dump($response);
+                    return('Payment done ' . __FILE__ );
+                } catch ( \Exception $e) {
                     Session::flash ( 'fail-message', "Error! Please Try again." );
-                    return Redirect::back ();
+                    //return Redirect::back ();
+                    return('Payment not done ' . __FILE__ . ' ' . $e);
                 }
-            } );
+            });
 
 
 
