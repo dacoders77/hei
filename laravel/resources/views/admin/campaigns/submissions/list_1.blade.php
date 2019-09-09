@@ -54,6 +54,7 @@
   </div>
 
   <div class="row">
+    <h1>trace 67652 list_1.blade.php</h1>
     @foreach ([getStatus(5)] as $status)
       @php
         $statusCount = \Submission::where('campaign_id',1)
@@ -168,10 +169,10 @@
     ];
   }
 
-  // Columns
+  // Columns for all tables in Admin panel
   $columns = [
     [
-      'label' => 'UUID',
+      'label' => 'UUID trace 667752',
       'name' => 'uuid',
     ],
     [
@@ -189,6 +190,11 @@
     [
       'label' => 'Phone',
       'name' => 'phone',
+    ],
+    // Added by Boris. 08.09.19. Testing
+    [
+      'label' => 'Full address',
+      'name' => 'address_full',
     ],
     [
       'label' => 'Address Line 1',
@@ -285,6 +291,7 @@
 
 
   // Define section
+  // Tables, actions (approve, reject in dropdown menu) in Admin panel
   $sections = array(
     array(
       'id' => 'all',
@@ -563,7 +570,12 @@
   );
   @endphp
 
+  {{--DATA TABLES OUTPUT!!!--}}
   @foreach($sections as $section)
+    @php
+    dump($section);
+    @endphp
+    <h2>trace list_1.blade.php 676621</h2>
     @include('admin.campaigns.submissions.data_table', $section)
   @endforeach
 

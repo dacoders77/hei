@@ -59,6 +59,10 @@ Route::group(['namespace' => 'Campaigns'], function() {
 
 		Route::group(['domain' => $domain, 'middleware' => 'published'], function() use ($campaign) {
 
+
+            /**
+             * @TODO DELETE!
+             */
             Route::get('/pay', function () {
                 return view('campaigns.pages.stripe');
             })->name('pay');
@@ -79,6 +83,10 @@ Route::group(['namespace' => 'Campaigns'], function() {
                     return Redirect::back ();
                 }
             } );
+
+
+
+
 
 
 

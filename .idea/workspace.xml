@@ -2,11 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d7da41e4-9200-4814-87f8-e2b208fa5c71" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel/.gitignore" afterPath="$PROJECT_DIR$/laravel/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel/app/Model/Campaigns/Submission.php" afterPath="$PROJECT_DIR$/laravel/app/Model/Campaigns/Submission.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel/public/assets/js/build.js" afterPath="$PROJECT_DIR$/laravel/public/assets/js/build.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel/resources/assets/js/scripts.js" afterPath="$PROJECT_DIR$/laravel/resources/assets/js/scripts.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel/app/Classes/LogToFile.php" afterPath="$PROJECT_DIR$/laravel/app/Classes/LogToFile.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel/app/Http/Controllers/Admin/ApiController.php" afterPath="$PROJECT_DIR$/laravel/app/Http/Controllers/Admin/ApiController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel/app/Http/Controllers/Campaigns/SubmissionController_1.php" afterPath="$PROJECT_DIR$/laravel/app/Http/Controllers/Campaigns/SubmissionController_1.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel/public/assets/admin/js/admin.js" afterPath="$PROJECT_DIR$/laravel/public/assets/admin/js/admin.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel/resources/views/admin/campaigns/submissions/data_table.blade.php" afterPath="$PROJECT_DIR$/laravel/resources/views/admin/campaigns/submissions/data_table.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel/resources/views/admin/campaigns/submissions/list_1.blade.php" afterPath="$PROJECT_DIR$/laravel/resources/views/admin/campaigns/submissions/list_1.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel/routes/web.php" afterPath="$PROJECT_DIR$/laravel/routes/web.php" />
     </list>
     <ignored path="$PROJECT_DIR$/laravel/node_modules/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,131 +21,222 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index_1.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/laravel/resources/views/campaigns/index_1.blade.php">
+      <file leaf-file-name="list_1.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/laravel/resources/views/admin/campaigns/submissions/list_1.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="91" column="39" lean-forward="true" selection-start-line="91" selection-start-column="39" selection-end-line="91" selection-end-column="50" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="wrapper_1.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/laravel/resources/views/campaigns/layouts/wrapper_1.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1241">
-              <caret line="73" column="82" lean-forward="false" selection-start-line="73" selection-start-column="82" selection-end-line="73" selection-end-column="82" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="jsform.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/laravel/resources/views/campaigns/layouts/jsform.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6273">
-              <caret line="369" column="61" lean-forward="false" selection-start-line="369" selection-start-column="61" selection-end-line="369" selection-end-column="61" />
+            <state relative-caret-position="262">
+              <caret line="344" column="70" lean-forward="true" selection-start-line="344" selection-start-column="47" selection-end-line="344" selection-end-column="70" />
               <folding>
-                <marker date="1567908617103" expanded="true" signature="6:74" ph="..." />
-                <marker date="1567908617103" expanded="true" signature="86:314" ph="..." />
-                <marker date="1567908617103" expanded="true" signature="98:312" ph="..." />
-                <marker date="1567908617103" expanded="true" signature="101:310" ph="..." />
-                <marker date="1567908617103" expanded="true" signature="2022:2261" ph="..." />
-                <marker date="1567908617103" expanded="true" signature="2119:2260" ph="..." />
-                <marker date="1567908617103" expanded="true" signature="2316:2556" ph="..." />
-                <marker date="1567908617103" expanded="true" signature="2330:2554" ph="..." />
-                <marker date="1567908617103" expanded="true" signature="6440:6913" ph="..." />
-                <marker date="1567908617103" expanded="true" signature="6453:6612" ph="..." />
-                <marker date="1567908617103" expanded="true" signature="7694:7977" ph="..." />
-                <marker date="1567908617103" expanded="true" signature="7706:7975" ph="..." />
-                <marker date="1567908617103" expanded="true" signature="7731:7974" ph="..." />
-                <marker date="1567908617103" expanded="true" signature="10584:10822" ph="..." />
-                <marker date="1567908617103" expanded="true" signature="10596:10820" ph="..." />
-                <marker date="1567908617103" expanded="true" signature="10880:11118" ph="..." />
-                <marker date="1567908617103" expanded="true" signature="10892:11116" ph="..." />
-                <marker date="1567908617103" expanded="true" signature="11188:11444" ph="..." />
-                <marker date="1567908617103" expanded="true" signature="11202:11442" ph="..." />
-                <marker date="1567908617103" expanded="true" signature="11241:11441" ph="..." />
-                <marker date="1567908617103" expanded="true" signature="11897:12124" ph="..." />
-                <marker date="1567908617103" expanded="true" signature="11911:12122" ph="..." />
-                <marker date="1567908617103" expanded="true" signature="12943:13148" ph="..." />
-                <marker date="1567908617103" expanded="true" signature="12955:13146" ph="..." />
-                <marker date="1567908617103" expanded="true" signature="13828:14167" ph="..." />
-                <marker date="1567908617103" expanded="true" signature="13840:14165" ph="..." />
-                <marker date="1567908617103" expanded="true" signature="13876:14164" ph="..." />
-                <marker date="1567908617103" expanded="true" signature="14189:14629" ph="..." />
-                <marker date="1567908617103" expanded="true" signature="14201:14627" ph="..." />
-                <marker date="1567908617103" expanded="true" signature="14237:14626" ph="..." />
-                <marker date="1567908617103" expanded="true" signature="15233:15532" ph="..." />
-                <marker date="1567908617103" expanded="true" signature="15257:15530" ph="..." />
-                <marker date="1567908617103" expanded="true" signature="15293:15529" ph="..." />
+                <element signature="e#0#20265#0#Blade" expanded="false" />
+                <element signature="e#0#20265#0#Blade" expanded="false" />
+                <element signature="e#15865#17171#0#HTML" expanded="false" />
+                <element signature="e#17173#17874#0#HTML" expanded="false" />
+                <element signature="e#17906#20034#0#HTML" expanded="false" />
+                <marker date="1567973940914" expanded="true" signature="909:1068" ph="..." />
+                <marker date="1567973940914" expanded="true" signature="971:1057" ph="..." />
+                <marker date="1567973940914" expanded="true" signature="972:1056" ph="..." />
+                <marker date="1567973940914" expanded="true" signature="2066:2170" ph="..." />
+                <marker date="1567973940914" expanded="true" signature="2142:2150" ph="..." />
+                <marker date="1567973940914" expanded="true" signature="3105:3226" ph="..." />
+                <marker date="1567973940914" expanded="true" signature="3181:3206" ph="..." />
+                <marker date="1567973940914" expanded="true" signature="4161:4320" ph="..." />
+                <marker date="1567973940914" expanded="true" signature="4223:4309" ph="..." />
+                <marker date="1567973940914" expanded="true" signature="4224:4308" ph="..." />
+                <marker date="1567973940914" expanded="true" signature="5255:5414" ph="..." />
+                <marker date="1567973940914" expanded="true" signature="5317:5403" ph="..." />
+                <marker date="1567973940914" expanded="true" signature="5318:5402" ph="..." />
+                <marker date="1567973940914" expanded="true" signature="6299:15575" ph="..." />
+                <marker date="1567973940914" expanded="true" signature="6317:6377" ph="..." />
+                <marker date="1567973940914" expanded="true" signature="6323:6373" ph="..." />
+                <marker date="1567973940914" expanded="true" signature="6421:6526" ph="..." />
+                <marker date="1567973940914" expanded="true" signature="6446:6521" ph="..." />
+                <marker date="1567973940914" expanded="true" signature="6586:8818" ph="..." />
+                <marker date="1567973940914" expanded="true" signature="6592:6659" ph="..." />
+                <marker date="1567973940914" expanded="true" signature="6667:6733" ph="..." />
+                <marker date="1567973940914" expanded="true" signature="6741:6805" ph="..." />
+                <marker date="1567973940914" expanded="true" signature="6813:6869" ph="..." />
+                <marker date="1567973940914" expanded="true" signature="6877:6933" ph="..." />
+                <marker date="1567973940914" expanded="true" signature="6982:7052" ph="..." />
+                <marker date="1567973940914" expanded="true" signature="7060:7134" ph="..." />
+                <marker date="1567973940914" expanded="true" signature="7142:7216" ph="..." />
+                <marker date="1567973940914" expanded="true" signature="7224:7290" ph="..." />
+                <marker date="1567973940914" expanded="true" signature="7298:7362" ph="..." />
+                <marker date="1567973940914" expanded="true" signature="7370:7440" ph="..." />
+                <marker date="1567973940914" expanded="true" signature="7448:7520" ph="..." />
+                <marker date="1567973940914" expanded="true" signature="7528:7600" ph="..." />
+                <marker date="1567973940914" expanded="true" signature="7608:7681" ph="..." />
+                <marker date="1567973940914" expanded="true" signature="7689:7774" ph="..." />
+                <marker date="1567973940914" expanded="true" signature="7782:7844" ph="..." />
+                <marker date="1567973940914" expanded="true" signature="7852:7924" ph="..." />
+                <marker date="1567973940914" expanded="true" signature="7932:8003" ph="..." />
+                <marker date="1567973940914" expanded="true" signature="8011:8083" ph="..." />
+                <marker date="1567973940914" expanded="true" signature="8091:8165" ph="..." />
+                <marker date="1567973940914" expanded="true" signature="8173:8277" ph="..." />
+                <marker date="1567973940914" expanded="true" signature="8285:8343" ph="..." />
+                <marker date="1567973940914" expanded="true" signature="8351:8411" ph="..." />
+                <marker date="1567973940914" expanded="true" signature="8419:8479" ph="..." />
+                <marker date="1567973940914" expanded="true" signature="8487:8552" ph="..." />
+                <marker date="1567973940914" expanded="true" signature="8560:8636" ph="..." />
+                <marker date="1567973940914" expanded="true" signature="8644:8734" ph="..." />
+                <marker date="1567973940914" expanded="true" signature="8742:8813" ph="..." />
+                <marker date="1567973940914" expanded="true" signature="8934:15573" ph="..." />
+                <marker date="1567973940914" expanded="true" signature="8945:9735" ph="..." />
+                <marker date="1567973940914" expanded="false" signature="9112:9699" ph="..." />
+                <marker date="1567973940914" expanded="false" signature="9122:9188" ph="..." />
+                <marker date="1567973940914" expanded="true" signature="9200:9268" ph="..." />
+                <marker date="1567973940914" expanded="true" signature="9280:9419" ph="..." />
+                <marker date="1567973940914" expanded="true" signature="9431:9690" ph="..." />
+                <marker date="1567973940914" expanded="true" signature="9551:9679" ph="..." />
+                <marker date="1567973940914" expanded="true" signature="9565:9666" ph="..." />
+                <marker date="1567973940914" expanded="true" signature="9748:12478" ph="..." />
+                <marker date="1567973940914" expanded="true" signature="9902:11424" ph="..." />
+                <marker date="1567973940914" expanded="true" signature="9958:11415" ph="..." />
+                <marker date="1567973940914" expanded="true" signature="9970:10287" ph="..." />
+                <marker date="1567973940914" expanded="true" signature="10094:10274" ph="..." />
+                <marker date="1567973940914" expanded="true" signature="10301:10688" ph="..." />
+                <marker date="1567973940914" expanded="true" signature="10420:10675" ph="..." />
+                <marker date="1567973940914" expanded="true" signature="10702:10746" ph="..." />
+                <marker date="1567973940914" expanded="true" signature="10760:11040" ph="..." />
+                <marker date="1567973940914" expanded="true" signature="10882:11027" ph="..." />
+                <marker date="1567973940914" expanded="true" signature="11054:11404" ph="..." />
+                <marker date="1567973940914" expanded="true" signature="11171:11391" ph="..." />
+                <marker date="1567973940914" expanded="true" signature="11447:12334" ph="..." />
+                <marker date="1567973940914" expanded="true" signature="11457:11523" ph="..." />
+                <marker date="1567973940914" expanded="true" signature="11535:11603" ph="..." />
+                <marker date="1567973940914" expanded="true" signature="11615:12054" ph="..." />
+                <marker date="1567973940914" expanded="true" signature="11731:12043" ph="..." />
+                <marker date="1567973940914" expanded="true" signature="11745:11822" ph="..." />
+                <marker date="1567973940914" expanded="true" signature="11838:11927" ph="..." />
+                <marker date="1567973940914" expanded="true" signature="11943:12031" ph="..." />
+                <marker date="1567973940914" expanded="true" signature="12066:12325" ph="..." />
+                <marker date="1567973940914" expanded="true" signature="12186:12314" ph="..." />
+                <marker date="1567973940914" expanded="true" signature="12200:12301" ph="..." />
+                <marker date="1567973940914" expanded="true" signature="12368:12471" ph="..." />
+                <marker date="1567973940914" expanded="true" signature="12369:12461" ph="..." />
+                <marker date="1567973940914" expanded="true" signature="12370:12460" ph="..." />
+                <marker date="1567973940914" expanded="false" signature="12491:13113" ph="..." />
+                <marker date="1567973940914" expanded="true" signature="12641:13077" ph="..." />
+                <marker date="1567973940914" expanded="true" signature="12651:12717" ph="..." />
+                <marker date="1567973940914" expanded="true" signature="12729:12797" ph="..." />
+                <marker date="1567973940914" expanded="true" signature="12809:13068" ph="..." />
+                <marker date="1567973940914" expanded="true" signature="12929:13057" ph="..." />
+                <marker date="1567973940914" expanded="true" signature="12943:13044" ph="..." />
+                <marker date="1567973940914" expanded="false" signature="13126:13887" ph="..." />
+                <marker date="1567973940914" expanded="true" signature="13285:13851" ph="..." />
+                <marker date="1567973940914" expanded="true" signature="13295:13361" ph="..." />
+                <marker date="1567973940914" expanded="true" signature="13373:13441" ph="..." />
+                <marker date="1567973940914" expanded="true" signature="13453:13712" ph="..." />
+                <marker date="1567973940914" expanded="true" signature="13573:13701" ph="..." />
+                <marker date="1567973940914" expanded="true" signature="13587:13688" ph="..." />
+                <marker date="1567973940914" expanded="true" signature="13724:13842" ph="..." />
+                <marker date="1567973940914" expanded="false" signature="13900:14529" ph="..." />
+                <marker date="1567973940914" expanded="true" signature="14057:14493" ph="..." />
+                <marker date="1567973940914" expanded="true" signature="14067:14133" ph="..." />
+                <marker date="1567973940914" expanded="true" signature="14145:14213" ph="..." />
+                <marker date="1567973940914" expanded="true" signature="14225:14484" ph="..." />
+                <marker date="1567973940914" expanded="true" signature="14345:14473" ph="..." />
+                <marker date="1567973940914" expanded="true" signature="14359:14460" ph="..." />
+                <marker date="1567973940914" expanded="false" signature="14542:15568" ph="..." />
+                <marker date="1567973940914" expanded="true" signature="14695:14977" ph="..." />
+                <marker date="1567973940914" expanded="true" signature="14751:14968" ph="..." />
+                <marker date="1567973940914" expanded="true" signature="14763:14957" ph="..." />
+                <marker date="1567973940914" expanded="true" signature="14882:14944" ph="..." />
+                <marker date="1567973940914" expanded="true" signature="15000:15532" ph="..." />
+                <marker date="1567973940914" expanded="true" signature="15010:15076" ph="..." />
+                <marker date="1567973940914" expanded="true" signature="15088:15156" ph="..." />
+                <marker date="1567973940914" expanded="true" signature="15168:15252" ph="..." />
+                <marker date="1567973940914" expanded="true" signature="15264:15523" ph="..." />
+                <marker date="1567973940914" expanded="true" signature="15384:15512" ph="..." />
+                <marker date="1567973940914" expanded="true" signature="15398:15499" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SubmissionController_1.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="data_table.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/laravel/resources/views/admin/campaigns/submissions/data_table.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="223">
+              <caret line="122" column="92" lean-forward="false" selection-start-line="122" selection-start-column="92" selection-end-line="122" selection-end-column="92" />
+              <folding>
+                <marker date="1567966217902" expanded="true" signature="2737:2991" ph="..." />
+                <marker date="1567966217902" expanded="true" signature="2759:2989" ph="..." />
+                <marker date="1567966217902" expanded="true" signature="2760:2980" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SubmissionController_1.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/Campaigns/SubmissionController_1.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="50" column="0" lean-forward="true" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+            <state relative-caret-position="221">
+              <caret line="49" column="26" lean-forward="true" selection-start-line="49" selection-start-column="26" selection-end-line="49" selection-end-column="26" />
               <folding>
                 <element signature="e#50#76#0#PHP" expanded="true" />
+                <marker date="1568044880404" expanded="true" signature="480:50531" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="web.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/laravel/routes/web.php">
+      <file leaf-file-name="admin.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/laravel/routes/admin.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="969">
-              <caret line="83" column="0" lean-forward="false" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
-              <folding>
-                <element signature="e#455#1002#1#PHP" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="campaigns.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/laravel/config/campaigns.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="765">
-              <caret line="57" column="31" lean-forward="false" selection-start-line="57" selection-start-column="31" selection-end-line="57" selection-end-column="31" />
+            <state relative-caret-position="194">
+              <caret line="95" column="32" lean-forward="true" selection-start-line="95" selection-start-column="32" selection-end-line="95" selection-end-column="32" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="scripts.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/laravel/resources/assets/js/scripts.js">
+      <file leaf-file-name="ApiController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/Admin/ApiController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="7">
-              <caret line="249" column="23" lean-forward="false" selection-start-line="249" selection-start-column="23" selection-end-line="249" selection-end-column="23" />
+            <state relative-caret-position="347">
+              <caret line="634" column="27" lean-forward="false" selection-start-line="634" selection-start-column="27" selection-end-line="634" selection-end-column="27" />
               <folding>
-                <element signature="e#7417#7669#0" expanded="false" />
+                <element signature="e#46#72#0#PHP" expanded="true" />
+                <element signature="e#3684#4527#0#PHP" expanded="false" />
+                <element signature="e#4545#4780#0#PHP" expanded="false" />
+                <element signature="e#4798#4973#0#PHP" expanded="false" />
+                <element signature="e#4991#5872#0#PHP" expanded="false" />
+                <element signature="e#5890#6843#0#PHP" expanded="false" />
+                <element signature="e#6861#7372#0#PHP" expanded="false" />
+                <marker date="1567974969329" expanded="true" signature="11187:11193" ph=" " />
+                <marker date="1567974969329" expanded="true" signature="11206:11212" ph=" " />
+                <marker date="1567974969329" expanded="true" signature="11212:11218" ph=" " />
+                <marker date="1567974969329" expanded="true" signature="11256:11262" ph=" " />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SubmissionMeta.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/laravel/app/Model/Campaigns/SubmissionMeta.php">
+      <file leaf-file-name="TriggerMail.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/laravel/app/Facades/TriggerMail.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-35">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="68">
+              <caret line="4" column="62" lean-forward="false" selection-start-line="4" selection-start-column="62" selection-end-line="4" selection-end-column="62" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Submission.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/laravel/app/Model/Campaigns/Submission.php">
+      <file leaf-file-name="TriggerMailController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/TriggerMail/TriggerMailController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="373">
-              <caret line="41" column="31" lean-forward="false" selection-start-line="41" selection-start-column="31" selection-end-line="41" selection-end-column="31" />
+            <state relative-caret-position="1156">
+              <caret line="104" column="77" lean-forward="false" selection-start-line="104" selection-start-column="74" selection-end-line="104" selection-end-column="77" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".env" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/laravel/.env">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="260">
+              <caret line="19" column="64" lean-forward="true" selection-start-line="19" selection-start-column="64" selection-end-line="19" selection-end-column="64" />
               <folding />
             </state>
           </provider>
@@ -152,26 +246,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>sms</find>
-      <find>mail</find>
-      <find>TriggerMail::send</find>
-      <find>TriggerMail</find>
-      <find>vou</find>
-      <find>hide</find>
-      <find>sub</find>
-      <find>submit_</find>
-      <find>ajax</find>
-      <find>submit_wor</find>
-      <find>aja</find>
-      <find>jsform</find>
-      <find>store</find>
-      <find>hand</find>
-      <find>lara</find>
-      <find>change</find>
-      <find>submit</find>
-      <find>customer</find>
-      <find>formRoute</find>
-      <find>There seems</find>
       <find>STRIPE_PUB_KEY</find>
       <find>dash</find>
       <find>require-validation</find>
@@ -181,14 +255,34 @@
       <find>submit_working</find>
       <find>7788</find>
       <find>thank</find>
+      <find>address line 1</find>
+      <find>winner</find>
       <find>778899</find>
+      <find>js</find>
+      <find>tier a</find>
+      <find>pending</find>
+      <find>forea</find>
+      <find>api</find>
+      <find>api.a</find>
+      <find>address</find>
+      <find>$keys</find>
+      <find>$_GET</find>
+      <find>list</find>
+      <find>data</find>
+      <find>admin</find>
+      <find>approve all</find>
+      <find>campaigns_datatable_submissions</find>
+      <find>614</find>
+      <find>triggerm</find>
+      <find>campaign_1_bulk_approve</find>
+      <find>$columns</find>
     </findStrings>
     <dirStrings>
       <dir>W:\domains\hei.kk\laravel\resources\views\campaigns</dir>
       <dir>W:\domains\hei.kk\laravel\resources\assets\js</dir>
       <dir>W:\domains\hei.kk\laravel\resources\views</dir>
-      <dir>W:\domains\hei.kk</dir>
       <dir>W:\domains\hei.kk\laravel\resources</dir>
+      <dir>W:\domains\hei.kk</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -197,8 +291,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/laravel/.env" />
-        <option value="$PROJECT_DIR$/laravel/app/Classes/LogToFile.php" />
         <option value="$PROJECT_DIR$/laravel/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php" />
         <option value="$PROJECT_DIR$/laravel/storage/logs/laravel-2019-09-05.log" />
         <option value="$PROJECT_DIR$/laravel/resources/views/campaigns/layouts/delete.blade.php" />
@@ -222,13 +314,19 @@
         <option value="$PROJECT_DIR$/.env.example" />
         <option value="$PROJECT_DIR$/laravel/resources/views/campaigns/layouts/jsform.blade.php" />
         <option value="$PROJECT_DIR$/laravel/resources/views/campaigns/pages/stripe.blade.php" />
-        <option value="$PROJECT_DIR$/laravel/routes/web.php" />
-        <option value="$PROJECT_DIR$/laravel/storage/logs/debug.txt" />
-        <option value="$PROJECT_DIR$/laravel/app/Http/Controllers/Campaigns/SubmissionController_1.php" />
         <option value="$PROJECT_DIR$/laravel/resources/views/campaigns/index_1.blade.php" />
         <option value="$PROJECT_DIR$/laravel/resources/assets/js/scripts.js" />
         <option value="$PROJECT_DIR$/laravel/app/Model/Campaigns/Submission.php" />
         <option value="$PROJECT_DIR$/laravel/.gitignore" />
+        <option value="$PROJECT_DIR$/laravel/public/assets/admin/js/admin.js" />
+        <option value="$PROJECT_DIR$/laravel/routes/web.php" />
+        <option value="$PROJECT_DIR$/laravel/resources/views/admin/campaigns/submissions/data_table.blade.php" />
+        <option value="$PROJECT_DIR$/laravel/app/Classes/LogToFile.php" />
+        <option value="$PROJECT_DIR$/laravel/resources/views/admin/campaigns/submissions/list_1.blade.php" />
+        <option value="$PROJECT_DIR$/laravel/app/Http/Controllers/Admin/ApiController.php" />
+        <option value="$PROJECT_DIR$/laravel/.env" />
+        <option value="$PROJECT_DIR$/laravel/storage/logs/debug.txt" />
+        <option value="$PROJECT_DIR$/laravel/app/Http/Controllers/Campaigns/SubmissionController_1.php" />
       </list>
     </option>
   </component>
@@ -293,6 +391,13 @@
               <item name="hei.kk" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="laravel" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Classes" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="hei.kk" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hei.kk" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="laravel" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Facades" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
@@ -317,6 +422,15 @@
               <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Http" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Controllers" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Admin" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="hei.kk" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hei.kk" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="laravel" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Http" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Controllers" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Campaigns" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
@@ -324,7 +438,24 @@
               <item name="hei.kk" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="laravel" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Http" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Controllers" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="TriggerMail" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="hei.kk" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hei.kk" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="laravel" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Model" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="hei.kk" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hei.kk" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="laravel" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Model" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Admin" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="hei.kk" type="b2602c69:ProjectViewProjectNode" />
@@ -381,6 +512,33 @@
               <item name="laravel" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="admin" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="hei.kk" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hei.kk" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="laravel" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="admin" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="campaigns" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="hei.kk" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hei.kk" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="laravel" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="admin" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="campaigns" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="submissions" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="hei.kk" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hei.kk" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="laravel" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="campaigns" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
@@ -420,69 +578,6 @@
               <item name="storage" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="logs" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
-            <path>
-              <item name="hei.kk" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hei.kk" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="laravel" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="vendor" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="hei.kk" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hei.kk" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="laravel" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="vendor" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="laravel" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="hei.kk" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hei.kk" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="laravel" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="vendor" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="laravel" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="framework" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="hei.kk" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hei.kk" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="laravel" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="vendor" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="laravel" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="framework" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="hei.kk" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hei.kk" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="laravel" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="vendor" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="laravel" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="framework" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Illuminate" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="hei.kk" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hei.kk" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="laravel" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="vendor" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="laravel" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="framework" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Illuminate" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Database" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="hei.kk" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hei.kk" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="laravel" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="vendor" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="laravel" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="framework" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Illuminate" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Database" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Eloquent" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -521,6 +616,9 @@
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="d7da41e4-9200-4814-87f8-e2b208fa5c71" name="Default" comment="" />
@@ -532,18 +630,18 @@
       <workItem from="1567804791719" duration="20570000" />
       <workItem from="1567870942160" duration="2230000" />
       <workItem from="1567878040267" duration="12845000" />
-      <workItem from="1567910672387" duration="10963000" />
+      <workItem from="1567910672387" duration="25031000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="95428000" />
+    <option name="totallyTimeSpent" value="109496000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2246596" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16414523" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -594,54 +692,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/laravel/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="554" column="28" lean-forward="false" selection-start-line="554" selection-start-column="23" selection-end-line="554" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/app/Model/Campaigns/Campaign.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="6" lean-forward="false" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="14" lean-forward="false" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/resources/views/campaigns/layouts/delete.blade.php" />
-    <entry file="file://$PROJECT_DIR$/laravel/resources/views/campaigns/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/app/Console/Commands/CreateCampaign.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1022">
-          <caret line="130" column="21" lean-forward="false" selection-start-line="130" selection-start-column="21" selection-end-line="130" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/.env.example" />
-    <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/Campaigns/CheckoutController_1.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="31" column="44" lean-forward="false" selection-start-line="31" selection-start-column="44" selection-end-line="31" selection-end-column="44" />
-          <folding>
-            <element signature="e#520#2591#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/laravel/resources/views/layouts/app.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -657,13 +707,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/laravel/storage/logs/laravel-2019-09-06.log" />
-    <entry file="file://$PROJECT_DIR$/laravel/app/Classes/LogToFile.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/laravel/resources/views/campaigns/layouts/wrapper.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="297">
@@ -742,25 +785,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/app/Facades/TriggerMail.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="62" lean-forward="false" selection-start-line="4" selection-start-column="62" selection-end-line="4" selection-end-column="62" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/laravel/resources/views/campaigns/mail/approved.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
           <caret line="64" column="60" lean-forward="false" selection-start-line="64" selection-start-column="60" selection-end-line="64" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/TriggerMail/TriggerMailController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="104" column="77" lean-forward="false" selection-start-line="104" selection-start-column="74" selection-end-line="104" selection-end-column="77" />
         </state>
       </provider>
     </entry>
@@ -806,14 +834,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/Campaigns/CampaignController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3043">
-          <caret line="189" column="60" lean-forward="false" selection-start-line="189" selection-start-column="26" selection-end-line="189" selection-end-column="60" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/laravel/resources/assets/js/campaign.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="6511">
@@ -836,36 +856,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/.env">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="19" lean-forward="false" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/config/campaigns.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="57" column="31" lean-forward="false" selection-start-line="57" selection-start-column="31" selection-end-line="57" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/Campaigns/SubmissionController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="339" column="8" lean-forward="false" selection-start-line="339" selection-start-column="8" selection-end-line="347" selection-end-column="60" />
-          <folding>
-            <element signature="e#3503#6202#0#PHP" expanded="false" />
-            <element signature="e#6455#7824#0#PHP" expanded="false" />
-            <element signature="e#7874#8798#2#PHP" expanded="false" />
-            <element signature="e#8829#9098#0#PHP" expanded="false" />
-            <element signature="e#9155#9261#0#PHP" expanded="false" />
-            <marker date="1567840152740" expanded="true" signature="9623:9825" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/laravel/resources/views/campaigns/layouts/wrapper_1.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1241">
@@ -878,16 +868,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="14" column="49" lean-forward="false" selection-start-line="14" selection-start-column="49" selection-end-line="14" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="969">
-          <caret line="83" column="0" lean-forward="false" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
-          <folding>
-            <element signature="e#455#1002#1#PHP" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -933,46 +913,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/storage/logs/debug.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/Campaigns/SubmissionController_1.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="50" column="0" lean-forward="true" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
-          <folding>
-            <element signature="e#50#76#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/laravel/resources/views/campaigns/index_1.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="91" column="39" lean-forward="true" selection-start-line="91" selection-start-column="39" selection-end-line="91" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/resources/assets/js/scripts.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7">
-          <caret line="249" column="23" lean-forward="false" selection-start-line="249" selection-start-column="23" selection-end-line="249" selection-end-column="23" />
-          <folding>
-            <element signature="e#7417#7669#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/app/Model/Campaigns/SubmissionMeta.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-35">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -993,11 +937,328 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/public/assets/admin/js/admin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="28254">
+          <caret line="1470" column="24" lean-forward="false" selection-start-line="1470" selection-start-column="18" selection-end-line="1470" selection-end-column="24" />
+          <folding>
+            <marker date="1567962736848" expanded="true" signature="39180:39190" ph="..." />
+            <marker date="1567962736848" expanded="true" signature="39228:39237" ph="..." />
+            <marker date="1567962736848" expanded="true" signature="39391:39402" ph="..." />
+            <marker date="1567962736848" expanded="true" signature="55567:55573" ph=" " />
+            <marker date="1567962736848" expanded="true" signature="55991:55997" ph=" " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/resources/assets/js/scripts.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7">
+          <caret line="249" column="23" lean-forward="false" selection-start-line="249" selection-start-column="23" selection-end-line="249" selection-end-column="23" />
+          <folding>
+            <element signature="e#7417#7669#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/config/campaigns.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="57" column="31" lean-forward="false" selection-start-line="57" selection-start-column="31" selection-end-line="57" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/Campaigns/CampaignController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="81" column="11" lean-forward="false" selection-start-line="81" selection-start-column="7" selection-end-line="81" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/resources/views/admin/campaigns/list.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-27">
+          <caret line="61" column="38" lean-forward="false" selection-start-line="61" selection-start-column="36" selection-end-line="61" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/Campaigns/SubmissionController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="109">
+          <caret line="70" column="29" lean-forward="true" selection-start-line="70" selection-start-column="29" selection-end-line="70" selection-end-column="29" />
+          <folding>
+            <element signature="e#3503#6202#0#PHP" expanded="false" />
+            <element signature="e#6455#7824#0#PHP" expanded="false" />
+            <element signature="e#7874#8798#2#PHP" expanded="false" />
+            <element signature="e#8829#9098#0#PHP" expanded="false" />
+            <element signature="e#9155#9261#0#PHP" expanded="false" />
+            <marker date="1567840152740" expanded="true" signature="9623:9825" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="819" column="13" lean-forward="false" selection-start-line="819" selection-start-column="13" selection-end-line="819" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/app/Model/Campaigns/SubmissionMeta.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-68">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/laravel/app/Model/Campaigns/Submission.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="373">
-          <caret line="41" column="31" lean-forward="false" selection-start-line="41" selection-start-column="31" selection-end-line="41" selection-end-column="31" />
+        <state relative-caret-position="118">
+          <caret line="24" column="7" lean-forward="true" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="7" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/app/Classes/LogToFile.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="15" column="44" lean-forward="false" selection-start-line="15" selection-start-column="44" selection-end-line="15" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/routes/admin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="95" column="32" lean-forward="true" selection-start-line="95" selection-start-column="32" selection-end-line="95" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="8" column="17" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+          <folding>
+            <element signature="e#455#1002#1#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/resources/views/admin/campaigns/submissions/data_table.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="122" column="92" lean-forward="false" selection-start-line="122" selection-start-column="92" selection-end-line="122" selection-end-column="92" />
+          <folding>
+            <marker date="1567966217902" expanded="true" signature="2737:2991" ph="..." />
+            <marker date="1567966217902" expanded="true" signature="2759:2989" ph="..." />
+            <marker date="1567966217902" expanded="true" signature="2760:2980" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/resources/views/admin/campaigns/submissions/list_1.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="262">
+          <caret line="344" column="70" lean-forward="true" selection-start-line="344" selection-start-column="47" selection-end-line="344" selection-end-column="70" />
+          <folding>
+            <element signature="e#0#20265#0#Blade" expanded="false" />
+            <element signature="e#0#20265#0#Blade" expanded="false" />
+            <element signature="e#15865#17171#0#HTML" expanded="false" />
+            <element signature="e#17173#17874#0#HTML" expanded="false" />
+            <element signature="e#17906#20034#0#HTML" expanded="false" />
+            <marker date="1567973940914" expanded="true" signature="909:1068" ph="..." />
+            <marker date="1567973940914" expanded="true" signature="971:1057" ph="..." />
+            <marker date="1567973940914" expanded="true" signature="972:1056" ph="..." />
+            <marker date="1567973940914" expanded="true" signature="2066:2170" ph="..." />
+            <marker date="1567973940914" expanded="true" signature="2142:2150" ph="..." />
+            <marker date="1567973940914" expanded="true" signature="3105:3226" ph="..." />
+            <marker date="1567973940914" expanded="true" signature="3181:3206" ph="..." />
+            <marker date="1567973940914" expanded="true" signature="4161:4320" ph="..." />
+            <marker date="1567973940914" expanded="true" signature="4223:4309" ph="..." />
+            <marker date="1567973940914" expanded="true" signature="4224:4308" ph="..." />
+            <marker date="1567973940914" expanded="true" signature="5255:5414" ph="..." />
+            <marker date="1567973940914" expanded="true" signature="5317:5403" ph="..." />
+            <marker date="1567973940914" expanded="true" signature="5318:5402" ph="..." />
+            <marker date="1567973940914" expanded="true" signature="6299:15575" ph="..." />
+            <marker date="1567973940914" expanded="true" signature="6317:6377" ph="..." />
+            <marker date="1567973940914" expanded="true" signature="6323:6373" ph="..." />
+            <marker date="1567973940914" expanded="true" signature="6421:6526" ph="..." />
+            <marker date="1567973940914" expanded="true" signature="6446:6521" ph="..." />
+            <marker date="1567973940914" expanded="true" signature="6586:8818" ph="..." />
+            <marker date="1567973940914" expanded="true" signature="6592:6659" ph="..." />
+            <marker date="1567973940914" expanded="true" signature="6667:6733" ph="..." />
+            <marker date="1567973940914" expanded="true" signature="6741:6805" ph="..." />
+            <marker date="1567973940914" expanded="true" signature="6813:6869" ph="..." />
+            <marker date="1567973940914" expanded="true" signature="6877:6933" ph="..." />
+            <marker date="1567973940914" expanded="true" signature="6982:7052" ph="..." />
+            <marker date="1567973940914" expanded="true" signature="7060:7134" ph="..." />
+            <marker date="1567973940914" expanded="true" signature="7142:7216" ph="..." />
+            <marker date="1567973940914" expanded="true" signature="7224:7290" ph="..." />
+            <marker date="1567973940914" expanded="true" signature="7298:7362" ph="..." />
+            <marker date="1567973940914" expanded="true" signature="7370:7440" ph="..." />
+            <marker date="1567973940914" expanded="true" signature="7448:7520" ph="..." />
+            <marker date="1567973940914" expanded="true" signature="7528:7600" ph="..." />
+            <marker date="1567973940914" expanded="true" signature="7608:7681" ph="..." />
+            <marker date="1567973940914" expanded="true" signature="7689:7774" ph="..." />
+            <marker date="1567973940914" expanded="true" signature="7782:7844" ph="..." />
+            <marker date="1567973940914" expanded="true" signature="7852:7924" ph="..." />
+            <marker date="1567973940914" expanded="true" signature="7932:8003" ph="..." />
+            <marker date="1567973940914" expanded="true" signature="8011:8083" ph="..." />
+            <marker date="1567973940914" expanded="true" signature="8091:8165" ph="..." />
+            <marker date="1567973940914" expanded="true" signature="8173:8277" ph="..." />
+            <marker date="1567973940914" expanded="true" signature="8285:8343" ph="..." />
+            <marker date="1567973940914" expanded="true" signature="8351:8411" ph="..." />
+            <marker date="1567973940914" expanded="true" signature="8419:8479" ph="..." />
+            <marker date="1567973940914" expanded="true" signature="8487:8552" ph="..." />
+            <marker date="1567973940914" expanded="true" signature="8560:8636" ph="..." />
+            <marker date="1567973940914" expanded="true" signature="8644:8734" ph="..." />
+            <marker date="1567973940914" expanded="true" signature="8742:8813" ph="..." />
+            <marker date="1567973940914" expanded="true" signature="8934:15573" ph="..." />
+            <marker date="1567973940914" expanded="true" signature="8945:9735" ph="..." />
+            <marker date="1567973940914" expanded="false" signature="9112:9699" ph="..." />
+            <marker date="1567973940914" expanded="false" signature="9122:9188" ph="..." />
+            <marker date="1567973940914" expanded="true" signature="9200:9268" ph="..." />
+            <marker date="1567973940914" expanded="true" signature="9280:9419" ph="..." />
+            <marker date="1567973940914" expanded="true" signature="9431:9690" ph="..." />
+            <marker date="1567973940914" expanded="true" signature="9551:9679" ph="..." />
+            <marker date="1567973940914" expanded="true" signature="9565:9666" ph="..." />
+            <marker date="1567973940914" expanded="true" signature="9748:12478" ph="..." />
+            <marker date="1567973940914" expanded="true" signature="9902:11424" ph="..." />
+            <marker date="1567973940914" expanded="true" signature="9958:11415" ph="..." />
+            <marker date="1567973940914" expanded="true" signature="9970:10287" ph="..." />
+            <marker date="1567973940914" expanded="true" signature="10094:10274" ph="..." />
+            <marker date="1567973940914" expanded="true" signature="10301:10688" ph="..." />
+            <marker date="1567973940914" expanded="true" signature="10420:10675" ph="..." />
+            <marker date="1567973940914" expanded="true" signature="10702:10746" ph="..." />
+            <marker date="1567973940914" expanded="true" signature="10760:11040" ph="..." />
+            <marker date="1567973940914" expanded="true" signature="10882:11027" ph="..." />
+            <marker date="1567973940914" expanded="true" signature="11054:11404" ph="..." />
+            <marker date="1567973940914" expanded="true" signature="11171:11391" ph="..." />
+            <marker date="1567973940914" expanded="true" signature="11447:12334" ph="..." />
+            <marker date="1567973940914" expanded="true" signature="11457:11523" ph="..." />
+            <marker date="1567973940914" expanded="true" signature="11535:11603" ph="..." />
+            <marker date="1567973940914" expanded="true" signature="11615:12054" ph="..." />
+            <marker date="1567973940914" expanded="true" signature="11731:12043" ph="..." />
+            <marker date="1567973940914" expanded="true" signature="11745:11822" ph="..." />
+            <marker date="1567973940914" expanded="true" signature="11838:11927" ph="..." />
+            <marker date="1567973940914" expanded="true" signature="11943:12031" ph="..." />
+            <marker date="1567973940914" expanded="true" signature="12066:12325" ph="..." />
+            <marker date="1567973940914" expanded="true" signature="12186:12314" ph="..." />
+            <marker date="1567973940914" expanded="true" signature="12200:12301" ph="..." />
+            <marker date="1567973940914" expanded="true" signature="12368:12471" ph="..." />
+            <marker date="1567973940914" expanded="true" signature="12369:12461" ph="..." />
+            <marker date="1567973940914" expanded="true" signature="12370:12460" ph="..." />
+            <marker date="1567973940914" expanded="false" signature="12491:13113" ph="..." />
+            <marker date="1567973940914" expanded="true" signature="12641:13077" ph="..." />
+            <marker date="1567973940914" expanded="true" signature="12651:12717" ph="..." />
+            <marker date="1567973940914" expanded="true" signature="12729:12797" ph="..." />
+            <marker date="1567973940914" expanded="true" signature="12809:13068" ph="..." />
+            <marker date="1567973940914" expanded="true" signature="12929:13057" ph="..." />
+            <marker date="1567973940914" expanded="true" signature="12943:13044" ph="..." />
+            <marker date="1567973940914" expanded="false" signature="13126:13887" ph="..." />
+            <marker date="1567973940914" expanded="true" signature="13285:13851" ph="..." />
+            <marker date="1567973940914" expanded="true" signature="13295:13361" ph="..." />
+            <marker date="1567973940914" expanded="true" signature="13373:13441" ph="..." />
+            <marker date="1567973940914" expanded="true" signature="13453:13712" ph="..." />
+            <marker date="1567973940914" expanded="true" signature="13573:13701" ph="..." />
+            <marker date="1567973940914" expanded="true" signature="13587:13688" ph="..." />
+            <marker date="1567973940914" expanded="true" signature="13724:13842" ph="..." />
+            <marker date="1567973940914" expanded="false" signature="13900:14529" ph="..." />
+            <marker date="1567973940914" expanded="true" signature="14057:14493" ph="..." />
+            <marker date="1567973940914" expanded="true" signature="14067:14133" ph="..." />
+            <marker date="1567973940914" expanded="true" signature="14145:14213" ph="..." />
+            <marker date="1567973940914" expanded="true" signature="14225:14484" ph="..." />
+            <marker date="1567973940914" expanded="true" signature="14345:14473" ph="..." />
+            <marker date="1567973940914" expanded="true" signature="14359:14460" ph="..." />
+            <marker date="1567973940914" expanded="false" signature="14542:15568" ph="..." />
+            <marker date="1567973940914" expanded="true" signature="14695:14977" ph="..." />
+            <marker date="1567973940914" expanded="true" signature="14751:14968" ph="..." />
+            <marker date="1567973940914" expanded="true" signature="14763:14957" ph="..." />
+            <marker date="1567973940914" expanded="true" signature="14882:14944" ph="..." />
+            <marker date="1567973940914" expanded="true" signature="15000:15532" ph="..." />
+            <marker date="1567973940914" expanded="true" signature="15010:15076" ph="..." />
+            <marker date="1567973940914" expanded="true" signature="15088:15156" ph="..." />
+            <marker date="1567973940914" expanded="true" signature="15168:15252" ph="..." />
+            <marker date="1567973940914" expanded="true" signature="15264:15523" ph="..." />
+            <marker date="1567973940914" expanded="true" signature="15384:15512" ph="..." />
+            <marker date="1567973940914" expanded="true" signature="15398:15499" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/Admin/ApiController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="347">
+          <caret line="634" column="27" lean-forward="false" selection-start-line="634" selection-start-column="27" selection-end-line="634" selection-end-column="27" />
+          <folding>
+            <element signature="e#46#72#0#PHP" expanded="true" />
+            <element signature="e#3684#4527#0#PHP" expanded="false" />
+            <element signature="e#4545#4780#0#PHP" expanded="false" />
+            <element signature="e#4798#4973#0#PHP" expanded="false" />
+            <element signature="e#4991#5872#0#PHP" expanded="false" />
+            <element signature="e#5890#6843#0#PHP" expanded="false" />
+            <element signature="e#6861#7372#0#PHP" expanded="false" />
+            <marker date="1567974969329" expanded="true" signature="11187:11193" ph=" " />
+            <marker date="1567974969329" expanded="true" signature="11206:11212" ph=" " />
+            <marker date="1567974969329" expanded="true" signature="11212:11218" ph=" " />
+            <marker date="1567974969329" expanded="true" signature="11256:11262" ph=" " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/app/Facades/TriggerMail.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="62" lean-forward="false" selection-start-line="4" selection-start-column="62" selection-end-line="4" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/storage/logs/laravel-2019-09-09.log">
+      <provider selected="true" editor-type-id="LogFileEditorProvider">
+        <state relative-caret-position="263">
+          <caret line="71" column="42" lean-forward="true" selection-start-line="71" selection-start-column="42" selection-end-line="71" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/storage/logs/debug.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="19" column="64" lean-forward="true" selection-start-line="19" selection-start-column="64" selection-end-line="19" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/TriggerMail/TriggerMailController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1156">
+          <caret line="104" column="77" lean-forward="false" selection-start-line="104" selection-start-column="74" selection-end-line="104" selection-end-column="77" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/Campaigns/SubmissionController_1.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="49" column="26" lean-forward="true" selection-start-line="49" selection-start-column="26" selection-end-line="49" selection-end-column="26" />
+          <folding>
+            <element signature="e#50#76#0#PHP" expanded="true" />
+            <marker date="1568044880404" expanded="true" signature="480:50531" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>

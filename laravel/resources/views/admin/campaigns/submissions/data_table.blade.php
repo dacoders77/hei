@@ -118,6 +118,9 @@
         <style>
           #submissions-{{ $id }} th:last-child, #submissions-{{ $id }} td:last-child:not(:first-child) { display: none; }
         </style>
+
+          <!-- Data tables source feed via route: campaigns_datatable_submissions -->
+          <h4>data_table.blade.php {{ route('ajax.api','campaigns_datatable_submissions') }}</h4>
         <table id="submissions-{{ $id }}" class="table table-bordered table-striped" data-table="ajax" data-url="{{ route('ajax.api','campaigns_datatable_submissions') }}" data-filters="#submissions-filters-{{ $id }}" data-orderIndex="{{ $order_index }}" data-page-length="20">
               <thead>
                 <tr>
@@ -129,7 +132,10 @@
               </thead>
               <tbody>
                 <tr>
-                  <td colspan="99" style="padding:0;"><div class="progress active" style="margin:0;"><div class="progress-bar progress-bar-primary progress-bar-striped" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"><span>Loading...</span></div></div></td>
+                  <td colspan="99" style="padding:0;">
+                      <div class="progress active" style="margin:0;">
+                          <div class="progress-bar progress-bar-primary progress-bar-striped" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+                              <span>Loading...</span></div></div></td>
                 </tr>
               </tbody>
               <tfoot>
