@@ -126,7 +126,7 @@
             </div>
         </div>
     </div>
-    
+
     <!--Claim approved-->
      <div class="page-wrapper hide" id="age-splash3">
             <div style="border: 0px solid blue; text-align: center; padding: 30px">
