@@ -94,12 +94,12 @@
             <img src="{{ asset('assets/images/H/58480a5fcef1014c0b5e4919-1.png') }}" alt="Heineken logo" width="200" height="110" class="hlogo">
         </div>
         <div class="claim-form row padding-horizontal-1">
-        <div class="columns small-12 medium-6 padding-1">
+        <div class="columns small-12 large-6 padding-1">
             <div class="claim-form__intro">
-                <img src="{{ asset('assets/images/H/claim_form.jpg') }}" alt="" width="480" height="635" class="claim-form-img">
+                <img src="{{ asset('assets/images/H/claim_form.jpg') }}" alt="" style="width: 100%" class="claim-form-img" width="893" height="1266">
             </div>
             </div>
-            <div class="columns small-12 medium-6 padding-1">
+            <div class="columns small-12 large-6 padding-1">
            <div class="claim-form__form padding-right">
                 <div class="form-wrapper">
                     <h1 class="claim-form__title margin-bottom-2 text-center"> Claim form</h1>
@@ -115,18 +115,84 @@
         <div style="border: 0px solid blue; text-align: center; padding: 30px">
              <img src="{{ asset('assets/images/H/58480a5fcef1014c0b5e4919-1.png') }}" alt="Heineken logo" width="200" height="110" class="hlogo">
         </div>
-        <div class="row claim-conditional">
-            <div class="columns small-12 medium-12">
+        <div class="row affirmation full">
+            <div class="columns small-12 affirmation__img">
                  <img src="{{ asset('assets/images/H/claim_confirmation.jpg') }}" alt="" width="100%" >
             </div>
-            <div class="columns small-12 medium-12 padding-3 ma">
-                <h2 class="text-center text-black margin-bottom-2">We’ve received your claim</h2>
-                <p class="text-center text-black">Thank you for submitting your claim. Your claim will be reviewed and approved within 2 days. You will then be sent an email with further instructions outlining how to process payment for your UE BLAST Speaker. </p>
-                <p class="text-center text-black">If you don’t receive an email please check your Junk and Spam folders. If you still can’t find it please Contact Us.</p>
+            <div class="columns small-12 medium-10 affirmation__text-wrap">
+                <h3 class="text-center text-black affirmation__title">We’ve received your claim</h3>
+                <p class="text-center text-black affirmation__text">Thank you for submitting your claim. Your claim will be reviewed and approved within 2 days. You will then be sent an email with further instructions outlining how to process payment for your UE BLAST Speaker. </p>
+                <p class="text-center text-black affirmation__text">If you don’t receive an email please check your Junk and Spam folders. If you still can’t find it please <a href = "#" class="affirmation__link"> Contact Us.</a></p>
             </div>
         </div>
     </div>
 
+    <!--Claim approved-->
+     <div class="page-wrapper hide" id="age-splash3">
+            <div style="border: 0px solid blue; text-align: center; padding: 30px">
+                 <img src="{{ asset('assets/images/H/58480a5fcef1014c0b5e4919-1.png') }}" alt="Heineken logo" width="200" height="110" class="hlogo">
+            </div>
+            <div class="row affirmation full">
+                <div class="columns small-12 affirmation__img">
+                     <img src="{{ asset('assets/images/H/claim_confirmation.jpg') }}" alt="" width="100%" >
+                </div>
+                <div class="columns small-12 medium-10 affirmation__text-wrap">
+                    <h3 class="text-center text-black affirmation__title">Your claim is approved</h3>
+                    <p class="text-center text-black affirmation__text">
+                    Congratulations! Your Heineken UE BLAST claim has been approved. Please click this <a href = "#" class="affirmation__link"> unique link </a> to process payment of &#36;129.95 for your UE BLAST Speaker by 12th November 2019.
+                    </p>
+                </div>
+            </div>
+     </div>
+
+      <!--Claim rejection-->
+     <div class="page-wrapper hide" id="age-splash3">
+           <div style="border: 0px solid blue; text-align: center; padding: 30px">
+                <img src="{{ asset('assets/images/H/58480a5fcef1014c0b5e4919-1.png') }}" alt="Heineken logo" width="200" height="110" class="hlogo">
+           </div>
+           <div class="row affirmation full">
+               <div class="columns small-12 affirmation__img">
+                    <img src="{{ asset('assets/images/H/claim_confirmation.jpg') }}" alt="" width="100%" >
+               </div>
+               <div class="columns small-12 medium-10 affirmation__text-wrap">
+                   <h3 class="text-center text-black affirmation__title">Unfortunately your <br>claim has been declined</h3>
+                   <p class="text-center text-black affirmation__text">Reason: &#91;Invalid reason&#93; </p>
+                   <p class="text-center text-black affirmation__text">If you have any further information you would like to provide please <a href = "#" class="affirmation__link">Contact Us.</a></p>
+               </div>
+           </div>
+     </div>
+      <!--Payment processed-->
+          <div class="page-wrapper hide" id="age-splash3">
+                <div style="border: 0px solid blue; text-align: center; padding: 30px">
+                     <img src="{{ asset('assets/images/H/58480a5fcef1014c0b5e4919-1.png') }}" alt="Heineken logo" width="200" height="110" class="hlogo">
+                </div>
+                <div class="row affirmation full">
+                    <div class="columns small-12 affirmation__img">
+                         <img src="{{ asset('assets/images/H/claim_confirmation.jpg') }}" alt="" width="100%" >
+                    </div>
+                    <div class="columns small-12 medium-10 affirmation__text-wrap">
+                        <h3 class="text-center text-black affirmation__title">Your payment <br> has been processed</h3>
+                        <p class="text-center text-black affirmation__text">Thank you for making your payment. Your payment will show up on your card from VCGPromorisk Pty Ltd within the next 72 working hours and you will receive your UE BLAST speaker within 28 business days.</p>
+                        <p class="text-center text-black affirmation__text">You will receive one final message from us when your speaker is shipped to your nominated address.</p>
+                    </div>
+                </div>
+          </div>
+        <!--Delivery-->
+                  <div class="page-wrapper hide" id="age-splash3">
+                        <div style="border: 0px solid blue; text-align: center; padding: 30px">
+                             <img src="{{ asset('assets/images/H/58480a5fcef1014c0b5e4919-1.png') }}" alt="Heineken logo" width="200" height="110" class="hlogo">
+                        </div>
+                        <div class="row affirmation full">
+                            <div class="columns small-12 affirmation__img">
+                                 <img src="{{ asset('assets/images/H/claim_confirmation.jpg') }}" alt="" width="100%" >
+                            </div>
+                            <div class="columns small-12 medium-10 affirmation__text-wrap">
+                                <h3 class="text-center text-black affirmation__title">Your UE BLAST is on its way!</h3>
+                                <p class="text-center text-black affirmation__text">Here is your tracking number for reference:
+                                <span> XXXXX </span></p>
+                            </div>
+                        </div>
+                  </div>
 
 @endsection
 

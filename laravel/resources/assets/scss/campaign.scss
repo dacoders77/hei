@@ -36,7 +36,7 @@ body {
 	font-family: $ff-futura;
 	color: $body;
 	background-color: $green-dark;
-	font-weight: 300;
+	font-weight: 400;
 }
 
 h1,.h1,
@@ -1031,23 +1031,52 @@ ul.af_list {
 }
 
 .claim-form {
-    &__intro {
-        img {
-            display: inline-block;
-            vertical-align: middle;
-            max-width: 100%;
-            width: 100%;
-            height: auto;
+        &__intro {
+            height: 100%;
+            background-color: $green-dark;
+            img {
+                display: block;
+                vertical-align: middle;
+                max-width: 100%;
+                width: 100%;
+                height: auto;
+                object-fit: contain;
+            }
+        }
+
+        &__form {
+            background-color: $green-dark;
         }
     }
-    &__form {
-        background-color: $green-dark;
-    }
-}
 
-.claim-conditional {
+.affirmation {
 
-    .text-black {
+    &__text-wrap {
         color: $black;
+        margin: 0 auto;
+        padding: 45px 20px;
     }
+
+    &__title {
+        font-size: 26px;
+        line-height: 30px;
+        margin-bottom: 25px!important;
+    }
+
+    &__text {
+        line-height: 26px;
+        margin-bottom: 25px;
+
+        span {
+            display: block;
+            margin: 0 auto;
+        }
+    }
+
+    &__link {
+        color: $black;
+        text-decoration: underline;
+    }
+
+
 }

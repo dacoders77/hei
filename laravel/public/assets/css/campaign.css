@@ -3,7 +3,7 @@ body {
   font-family: "Heineken Serif 18", "Futura PT", "Open Sans", Arial, sans-serif;
   color: #fff;
   background-color: #00851e;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 h1, .h1,
@@ -1030,20 +1030,50 @@ ul.af_list li.af_footer {
   text-decoration: underline;
 }
 
+.claim-form__intro {
+  height: 100%;
+  background-color: #00851e;
+}
+
 .claim-form__intro img {
-  display: inline-block;
+  display: block;
   vertical-align: middle;
   max-width: 100%;
   width: 100%;
   height: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .claim-form__form {
   background-color: #00851e;
 }
 
-.claim-conditional .text-black {
+.affirmation__text-wrap {
   color: #000;
+  margin: 0 auto;
+  padding: 45px 20px;
+}
+
+.affirmation__title {
+  font-size: 26px;
+  line-height: 30px;
+  margin-bottom: 25px !important;
+}
+
+.affirmation__text {
+  line-height: 26px;
+  margin-bottom: 25px;
+}
+
+.affirmation__text span {
+  display: block;
+  margin: 0 auto;
+}
+
+.affirmation__link {
+  color: #000;
+  text-decoration: underline;
 }
 
 /*# sourceMappingURL=campaign.css.map */
