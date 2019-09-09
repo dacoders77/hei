@@ -571,12 +571,12 @@ class ApiController extends Controller
 
             $data = [];
 
-            if( floatval(preg_replace('/[^0-9\.]+/', '', $submission->meta('invoice_total'))) >= 500 ) {
+            //if( floatval(preg_replace('/[^0-9\.]+/', '', $submission->meta('invoice_total'))) >= 500 ) {
 
-                if( !Submission::whereMetaValue([
+                /*if( !Submission::whereMetaValue([
                     ['payer_number',$submission->meta('payer_number')],
                     ['kayo',1],
-                ])->count() ) {
+                ])->count() ) {*/
                     if( $voucher = Voucher::whereMeta([
                         ['meta_key','campaign_id'],
                         ['meta_value',1]
@@ -587,15 +587,15 @@ class ApiController extends Controller
 
                         $data['kayo'] = 1;
                         $data['kayo_voucher'] = $voucher->code;
-                        $data['kayo_link'] = $voucher->meta('url');
+                        $data['kayo_link'] = $voucher->meta('prize');
 
                         $voucher->updateMeta(['status'=>1]);
 
                     } else {
                         $data['flag_kayo'] = 'No more vouchers available';
                     }
-                }
-            }
+                //}
+            //}
 
             $n = Submission::whereMetaValue('status','REGEXP','^[3-9]$')->count();
 

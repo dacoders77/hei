@@ -127,7 +127,7 @@ class CampaignController_1 extends CampaignController
 
         // Additional Validations
 		$validator->after(function ($validator) use ($request) {
-			if( Input::hasFile('_vouchers_file') && empty($request->{'_map_code'}) && empty($request->{'_map_url'}) ) {
+			if( Input::hasFile('_vouchers_file') && empty($request->{'_map_code'}) && empty($request->{'_map_prize'}) ) {
 				$validator->errors()->add('_vouchers_file','No mapping was selected!');
 			}
 		});
@@ -155,7 +155,7 @@ class CampaignController_1 extends CampaignController
 			if( $file->isValid() ) {
 				$mapping = [
 					'_map_code' => $request->{'_map_code'},
-					'_map_url' => $request->{'_map_url'}
+					'_map_prize' => $request->{'_map_prize'}
 				];
 
 				try {

@@ -29,7 +29,7 @@ class VoucherController extends Controller
             }
 
             $code = $row[$mapping['_map_code']];
-            $url = $row[$mapping['_map_url']];
+            $prize = $row[$mapping['_map_prize']];
             if( !Voucher::where('code',$code)->first() ) {
             	$voucher = Voucher::create([
             		'code' => $code,
@@ -38,7 +38,7 @@ class VoucherController extends Controller
             	$voucher->updateMeta([
 	            	'status' => 0,
 	            	'campaign_id' => $request->campaign_id,
-                    'url' => $url,
+                    'prize' => $prize,
 	            ]);
             }
 

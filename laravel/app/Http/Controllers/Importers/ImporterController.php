@@ -140,6 +140,9 @@ class ImporterController extends Controller
                         'request' => $request
                     ]);
 
+                    $vc = new \App\Http\Controllers\Campaigns\VoucherController();
+                    $vc->process_vouchers($csv_import);
+                    
                     return true;
 
                 }
