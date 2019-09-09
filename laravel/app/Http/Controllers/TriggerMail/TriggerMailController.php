@@ -3,7 +3,9 @@
 namespace App\Http\Controllers\TriggerMail;
 
 use App\Http\Controllers\Controller;
-use Mail;
+
+use Illuminate\Support\Facades\Mail;
+//use Mail;
 use Log;
 use SMS;
 
@@ -32,14 +34,10 @@ class TriggerMailController extends Controller
 
 		try {
 			Mail::send($view, $args, function ($message) use ($args) {
-
 			    $message->to($args['to']['address'], $args['to']['name']);
-
 			    $message->sender($args['from']['address'], $args['from']['name']);
 			    $message->replyTo($args['reply']['address'], $args['reply']['name']);
-
 			    $message->subject($args['subject']);
-
 			});
 			return true;
 		} catch (\Exception $e) {
@@ -70,6 +68,10 @@ class TriggerMailController extends Controller
 		return self::send('campaigns.mail.contact_us_2', $args);
 	}
 
+    /**
+     * Called from SubmissionController_1.php on claim create.
+     * @param $submission
+     */
 	public function submissionStatus($submission)
 	{
 		$args = [
@@ -81,12 +83,14 @@ class TriggerMailController extends Controller
 			'campaign_id' => $submission->campaign_id,
 		];
 
-		if($submission->campaign_id==1) {
+		if($submission->campaign_id == 1) {
 			switch ($submission->meta('status')) {
 				case '1':
+				// Fresh claim created
 				case '2':
 					$args['subject'] = 'We are processing your entry';
-					self::send('campaigns.mail.pending',$args);
+					//self::send('campaigns.mail.pending',$args);
+                    self::send('campaigns.pages.1.info', ['title' => 'title-e', 'message' => 'msg']);
 
 					SMS::send($submission->meta('phone'), "Thank you for your GAME ON WITH DULUX claim.\n\nYour invoice will be validated within 2 business days and we will contact you via EMAIL and SMS.");
 					break;
@@ -98,7 +102,6 @@ class TriggerMailController extends Controller
 					$args['kayo_link'] = null;
 					$args['claim_link'] = route('campaign_1.tinyurl',$submission->meta('tiny_url'));
 					self::send('campaigns.mail.approved',$args);
-
 					SMS::send($submission->meta('phone'), "Congratulations! Your claim has been approved.\n\nClick the link below Click on the link below by 20th October 2019 for your chance to Scratch & Win.\n\n".preg_replace('/^(https?:\/\/)?(www\.)?/i','',$args['claim_link']));
 
 					if( $args['kayo'] = $submission->meta('kayo') ){

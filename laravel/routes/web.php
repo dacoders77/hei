@@ -81,10 +81,12 @@ Route::group(['namespace' => 'Campaigns'], function() {
                             "description" => "Test payment."
                         ));
 
-                    Session::flash ( 'success-message', 'Payment done successfully !' );
+                    Session::flash ( 'success-message', 'Payment done successfully ! message from:' . __FILE__ );
                     //return Redirect::back();
-                    dump($response);
-                    return('Payment done ' . __FILE__ );
+                    //dump($response);
+                    return view('campaigns.pages.info', [
+                        'title' => 'Your payment has been processed',
+                        'message' => 'Thank you for making your payment. Your payment will show up on your card from VCGPromorisk Pty Ltd within the next 72 working hours and you will receive your UE BLAST speaker within 28 business days. You will receive one final message from us when your speaker is shipped to your nominated address.']);
                 } catch ( \Exception $e) {
                     Session::flash ( 'fail-message', "Error! Please Try again." );
                     //return Redirect::back ();

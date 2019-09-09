@@ -12,7 +12,8 @@ use SubmissionMeta;
 use Validator;
 use Campaign;
 use Response;
-use TriggerMail;
+//use TriggerMail;
+use App\Facades\TriggerMail;
 use Vision;
 use Timestamp;
 use Voucher;
@@ -39,10 +40,8 @@ class SubmissionController_1 extends SubmissionController
 
 		// Process Data
         //parse_str(file_get_contents("php://input"), $a);
-
         $data = $this->process_data( $request->all() );
         //LogToFile::add(__FILE__, json_encode($data, JSON_PRETTY_PRINT));
-
         //$data = $this->process_data($a);
 
 		// Setup Validation Fields
@@ -652,7 +651,8 @@ class SubmissionController_1 extends SubmissionController
 		$submission->updateMeta($data);
 
 		// Email
-		TriggerMail::send('submissionStatus',$submission);
+        // Call Http/Controllers/TriggerMail::
+		TriggerMail::send('submissionStatus', $submission);
 
 		// If json returned - no alert is shown in scripts.js
 		/*return Response::json([
@@ -660,7 +660,7 @@ class SubmissionController_1 extends SubmissionController
 			'data' => $data,
 		], 200);*/
 
-		// What was the return type here?
+		// Boris. What was the return type here?
 
 	}
 
