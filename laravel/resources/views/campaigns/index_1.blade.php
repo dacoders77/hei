@@ -94,18 +94,18 @@
             <img src="{{ asset('assets/images/H/58480a5fcef1014c0b5e4919-1.png') }}" alt="Heineken logo" width="200" height="110" class="hlogo">
         </div>
         <div class="claim-form row padding-horizontal-1">
-        <div class="columns small-12 large-6 padding-1">
-            <div class="claim-form__intro">
-                <img src="{{ asset('assets/images/H/claim_form.jpg') }}" alt="" style="width: 100%" class="claim-form-img" width="893" height="1266">
-            </div>
-            </div>
             <div class="columns small-12 large-6 padding-1">
-           <div class="claim-form__form padding-right">
-                <div class="form-wrapper">
-                    <h1 class="claim-form__title margin-bottom-2 text-center"> Claim form</h1>
-                    @include('campaigns.layouts.jsform',['formRoute'=>['campaign_'.$campaign->id.'.submissions.store',$campaign->id]])
+                <div class="claim-form__intro">
+                    <img src="{{ asset('assets/images/H/claim_form.jpg') }}" alt="" style="width: 100%" class="claim-form-img" width="893" height="1266">
                 </div>
             </div>
+            <div class="columns small-12 large-6 padding-1">
+                <div class="claim-form__form padding-right">
+                    <div class="form-wrapper">
+                        <h1 class="claim-form__title margin-bottom-2 text-center"> Claim form</h1>
+                        @include('campaigns.layouts.jsform',['formRoute'=>['campaign_'.$campaign->id.'.submissions.store',$campaign->id]])
+                    </div>
+                </div>
             </div>
         </div>
     </div>

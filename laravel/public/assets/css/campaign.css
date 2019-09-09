@@ -1047,6 +1047,12 @@ ul.af_list li.af_footer {
 
 .claim-form__form {
   background-color: #00851e;
+  min-height: 100%;
+}
+
+.claim-form__legend {
+  font-size: 26px;
+  font-weight: 600;
 }
 
 .affirmation__text-wrap {
@@ -1074,6 +1080,23 @@ ul.af_list li.af_footer {
 .affirmation__link {
   color: #000;
   text-decoration: underline;
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden,
+input[type="range"].visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 /*# sourceMappingURL=campaign.css.map */
