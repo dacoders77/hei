@@ -13,4 +13,6 @@ yarn-error.log
 .env
 .phpunit.result.cache
 
+.idea/workspace.xml
+workspace.xml
 
