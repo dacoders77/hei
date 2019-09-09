@@ -33,28 +33,15 @@ class SubmissionController_1 extends SubmissionController
      */
 	public function store(Request $request, $id)
 	{
-
-        //return redirect()->route('dash');
-        //return(['message' => '123msg from SubmissionController_1']);
-        //return view('campaigns.index_1', ['campaign' => \App\Model\Campaigns\Campaign::find(1)]);
-        //return view(['ca' => \App\Model\Campaigns\Campaign::find(1)]);
-
-        //return;
-
 		// Get Campaign Form Fields
 		$campaign = Campaign::find($id);
 		$campaign_form_fields = $campaign->meta('form_content');
 
 		// Process Data
-        //LogToFile::add(__FILE__, json_encode($request, JSON_PRETTY_PRINT));
-        //LogToFile::add(__FILE__, print_r($request->all(), true));
-
-        //LogToFile::add(__FILE__, file_get_contents("php://input")); // Show request body as text by PPP
         //parse_str(file_get_contents("php://input"), $a);
-        //LogToFile::add(__FILE__, json_encode($a, JSON_PRETTY_PRINT)); // Works good
 
         $data = $this->process_data( $request->all() );
-        LogToFile::add(__FILE__, json_encode($data, JSON_PRETTY_PRINT));
+        //LogToFile::add(__FILE__, json_encode($data, JSON_PRETTY_PRINT));
 
         //$data = $this->process_data($a);
 

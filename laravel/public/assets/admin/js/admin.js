@@ -1095,7 +1095,7 @@
 				showHeader: false,
 				fields: [{
                     type: "text",
-                    label: "Street address line 1",
+                    label: "Street address line",
                     className: "form-control",
                     name: "address_line_1",
                     required: true,

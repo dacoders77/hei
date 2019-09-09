@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Classes\LogToFile;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Response;
@@ -29,6 +30,13 @@ class ApiController extends Controller
         self::$importer = new ImporterController;
     }
 
+    /**
+     * Make sure method: campaigns_datatable_submissions
+     * exists
+     *
+     * @param Request $request
+     * @param $func
+     */
 	public function api(Request $request, $func)
 	{
 		if( method_exists( '\App\Http\Controllers\Admin\ApiController', $func ) )
@@ -94,9 +102,19 @@ class ApiController extends Controller
         return redirect()->back()->with('success','Rejection successfull: '.implode(', ',$uuids));
     }
 
-    // Show filter table
+    /**
+     * Show filter table
+     * Returns data table contents to admin panel.
+     * Columns are set in list_1.blade.php
+     * In order to add a column in admin panel - it should be added in list_1.blade.php
+     * Then
+     *
+     * @return array
+     */
     public function campaigns_datatable_submissions()
     {
+
+        // Add these 3 values to the array and get the array sent in GET method
         $data = (object) array_merge([
             'draw' => 1,
             'start' => 1,
@@ -104,6 +122,11 @@ class ApiController extends Controller
         ],$_GET);
 
         $vouchers = Submission::where('id','!=',null);
+
+        //LogToFile::add(__FILE__, json_encode($_GET, JSON_PRETTY_PRINT));
+        //foreach ($vouchers as $v)
+        //    LogToFile::add(__FILE__, json_encode($v));
+
 
         foreach ($data->columns as $column) {
             if(empty($column['search']['value'])) continue;
@@ -208,9 +231,13 @@ class ApiController extends Controller
 
         foreach ($rows as $voucher) {
 
+            // Submissions reords!!! Works good
             // $meta = (object) $voucher->meta();
+            // LogToFile::add(__FILE__, json_encode($meta, JSON_PRETTY_PRINT));
 
             $keys = [];
+
+            // Run trough all records in model and assign values
             foreach ($data->columns as $column) {
 
                 switch ($column['name']) {
@@ -231,9 +258,37 @@ class ApiController extends Controller
                         $keys[] = '<a href="'.$voucher->meta('receipt').'" target="_blank" class="btn btn-default btn-xs"><i class="fa fa-image"></i> View</a>';
                         break;
 
+                    // Boris
+                    // Only address full is returned.
+                    // No postal_address_line_1 and other fields is returned
                     case 'address':
                         $keys[] = $voucher->meta('address_full');
                         break;
+
+                    // Boris
+                    // Add new fields
+                    //    address_line_1
+                    case 'address_line_1':
+                        $keys[] = $voucher->meta('postal_address_line_1');
+                        break;
+
+                    case 'address_line_2':
+                        $keys[] = $voucher->meta('postal_address_line_2');
+                        break;
+
+                    case 'address_suburb':
+                        $keys[] = $voucher->meta('postal_address_suburb');
+                        break;
+
+                    case 'address_state':
+                        $keys[] = $voucher->meta('postal_address_state');
+                        break;
+
+                    case 'address_postcode':
+                        $keys[] = $voucher->meta('postal_address_postcode');
+                        break;
+
+
 
                     case 'flagged':
                         $flags = $voucher->meta('^flag_([^c]+[^o]+[^l]+[^o]+[^r]+|.{1,4}|.{6,})?$',true);
@@ -324,6 +379,8 @@ class ApiController extends Controller
                 array_column($json['data'], $data->order[0]['column']), $data->order[0]['dir'] == 'desc' ? SORT_DESC : SORT_ASC,
                 $json['data']);
 
+
+        //LogToFile::add(__FILE__, json_encode($keys, JSON_PRETTY_PRINT));
         return $json;
     }
 
@@ -489,7 +546,13 @@ class ApiController extends Controller
         }
     }
 
-    // Bulk Approve
+    /**
+     * Approve submissions in admin panel.
+     * Called from list_1.blade.php
+     * All paraveters are sent in an associative array.
+     *
+     * @return \Illuminate\Http\RedirectResponse
+     */
     public function campaign_1_bulk_approve()
     {
         $ids = explode(',',request()->ids);
