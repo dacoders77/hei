@@ -14,3 +14,77 @@
 //        background-color: #00851e;
 //    }
 //}
+
+
+
+.claim-form {
+  &__intro {
+    height: 100%;
+    background-color: $green-dark;
+    img {
+      display: block;
+      vertical-align: middle;
+      max-width: 100%;
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+  }
+
+  &__form {
+    background-color: $green-dark;
+    min-height: 100%;
+  }
+
+  &__legend {
+    font-size: 26px;
+    font-weight: 600;
+  }
+}
+
+.affirmation {
+
+  &__text-wrap {
+    color: $black;
+    margin: 0 auto;
+    padding: 45px 20px;
+  }
+
+  &__title {
+    font-size: 26px;
+    line-height: 30px;
+    margin-bottom: 25px!important;
+  }
+
+  &__text {
+    line-height: 26px;
+    margin-bottom: 25px;
+
+    span {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+
+  &__link {
+    color: $black;
+    text-decoration: underline;
+  }
+
+
+}
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden,
+input[type="range"].visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}

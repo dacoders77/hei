@@ -60,15 +60,12 @@ Route::group(['namespace' => 'Campaigns'], function() {
 		Route::group(['domain' => $domain, 'middleware' => 'published'], function() use ($campaign) {
 
 
-
             /**
              * @TODO DELETE! TEST ROUTES! Add everthing to config/campaigns.php
              */
             Route::get('/payform', function () {
                 return view('campaigns.pages.stripe');
             })->name('pay');
-
-            // 4737029104467395
 
             Route::post('/pay', function (Request $request) {
                 \Stripe\Stripe::setApiKey( 'sk_test_nLvUlYB8B0PgTbIyVobHYhpC00dQ5NfRng');
@@ -80,10 +77,7 @@ Route::group(['namespace' => 'Campaigns'], function() {
                             "source" => $request->input( 'stripeToken'), // obtained in Stripe.blade.php in script section
                             "description" => "Test payment."
                         ));
-
                     Session::flash ( 'success-message', 'Payment done successfully ! message from:' . __FILE__ );
-                    //return Redirect::back();
-                    //dump($response);
                     return view('campaigns.pages.info', [
                         'title' => 'Your payment has been processed',
                         'message' => 'Thank you for making your payment. Your payment will show up on your card from VCGPromorisk Pty Ltd within the next 72 working hours and you will receive your UE BLAST speaker within 28 business days. You will receive one final message from us when your speaker is shipped to your nominated address.']);
@@ -93,11 +87,6 @@ Route::group(['namespace' => 'Campaigns'], function() {
                     return('Payment not done ' . __FILE__ . ' ' . $e);
                 }
             });
-
-
-
-
-
 
 
 			foreach ($campaign->routes as $route) {

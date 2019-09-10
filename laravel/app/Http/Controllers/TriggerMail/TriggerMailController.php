@@ -3,9 +3,7 @@
 namespace App\Http\Controllers\TriggerMail;
 
 use App\Http\Controllers\Controller;
-
 use Illuminate\Support\Facades\Mail;
-//use Mail;
 use Log;
 use SMS;
 
@@ -13,15 +11,27 @@ class TriggerMailController extends Controller
 {
 	static $from;
 	static $reply;
+	static $text;
 
-	public function __construct()
+	public function __construct($text)
 	{
 		self::$from = config('mail.from');
 		self::$reply = config('mail.reply');
+		self::$text = $text;
 	}
 
+    /**
+     * Send email
+     * $text - an array which contains text variables shown in info.blade.php
+     *
+     * @param $view
+     * @param array $args
+     * @param array $text
+     * @return bool
+     */
 	private function send($view, $args=[])
 	{
+        //\App\Classes\LogToFile::add(__FILE__, json_encode(self::$text, JSON_PRETTY_PRINT));
 		$args = array_merge([
 			'to' => [
 				'address' => null,
@@ -30,14 +40,24 @@ class TriggerMailController extends Controller
 			'from' => self::$from,
 			'reply' => self::$reply,
 			'subject' => null,
-		],$args);
+		], $args);
 
 		try {
-			Mail::send($view, $args, function ($message) use ($args) {
-			    $message->to($args['to']['address'], $args['to']['name']);
-			    $message->sender($args['from']['address'], $args['from']['name']);
-			    $message->replyTo($args['reply']['address'], $args['reply']['name']);
-			    $message->subject($args['subject']);
+		    $data = [
+		        'args' => $args,
+                // info.bale.php variables array. Accessed via $text in blade
+                'text' => [
+                    'title' => self::$text['title'],
+                    'message' => self::$text['message'],
+                    'link' => self::$text['link'],
+                    'linkText' => self::$text['linkText']
+                ]
+            ];
+			Mail::send($view, $data, function ($message) use ($data) {
+			    $message->to($data['args']['to']['address'], $data['args']['to']['name']);
+			    $message->sender($data['args']['from']['address'], $data['args']['from']['name']);
+			    $message->replyTo($data['args']['reply']['address'], $data['args']['reply']['name']);
+			    $message->subject($data['args']['subject']);
 			});
 			return true;
 		} catch (\Exception $e) {
@@ -89,20 +109,24 @@ class TriggerMailController extends Controller
 				// Fresh claim created
 				case '2':
 					$args['subject'] = 'We are processing your entry';
-					//self::send('campaigns.mail.pending',$args);
-                    self::send('campaigns.pages.1.info', ['title' => 'title-e', 'message' => 'msg']);
+					//self::send('campaigns.mail.pending', $args); // Default. Works good.
+                    // ['title' => 'title-e', 'message' => 'msg']
+                    self::send('campaigns.pages.info', array_merge($args)); // Boris
 
-					SMS::send($submission->meta('phone'), "Thank you for your GAME ON WITH DULUX claim.\n\nYour invoice will be validated within 2 business days and we will contact you via EMAIL and SMS.");
+                    SMS::send($submission->meta('phone'), "Thank you for your GAME ON WITH DULUX claim.\n\nYour invoice will be validated within 2 business days and we will contact you via EMAIL and SMS.");
 					break;
 
 				case '3':
 					$args['subject'] = 'Congratulations! Your claim has been approved';
-					$args['kayo'] = false;
+					/*$args['kayo'] = false;
 					$args['kayo_voucher'] = null;
 					$args['kayo_link'] = null;
 					$args['claim_link'] = route('campaign_1.tinyurl',$submission->meta('tiny_url'));
-					self::send('campaigns.mail.approved',$args);
-					SMS::send($submission->meta('phone'), "Congratulations! Your claim has been approved.\n\nClick the link below Click on the link below by 20th October 2019 for your chance to Scratch & Win.\n\n".preg_replace('/^(https?:\/\/)?(www\.)?/i','',$args['claim_link']));
+					self::send('campaigns.mail.approved',$args);*/
+                    self::send('campaigns.pages.info', array_merge($args)); // Boris
+
+
+					/*SMS::send($submission->meta('phone'), "Congratulations! Your claim has been approved.\n\nClick the link below Click on the link below by 20th October 2019 for your chance to Scratch & Win.\n\n".preg_replace('/^(https?:\/\/)?(www\.)?/i','',$args['claim_link']));
 
 					if( $args['kayo'] = $submission->meta('kayo') ){
 						$args['subject'] = 'Congratulations! Here is your Kayo Voucher';
@@ -112,7 +136,7 @@ class TriggerMailController extends Controller
 						self::send('campaigns.mail.approved',$args);
 
 						SMS::send($submission->meta('phone'), "Your Dulux Kayo Subscription Claim is approved.\n\nWe have sent your activation link to ".$submission->meta('email').". Activate your subscription by 20th November 2019.");
-					}
+					}*/
 					break;
 
 				case '4':

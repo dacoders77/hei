@@ -24,8 +24,6 @@ use Crypt;
 
 class SubmissionController_1 extends SubmissionController
 {
-
-
 	/**
      * Store a newly created resource in storage.
      *
@@ -650,9 +648,15 @@ class SubmissionController_1 extends SubmissionController
 
 		$submission->updateMeta($data);
 
-		// Email
-        // Call Http/Controllers/TriggerMail::
-		TriggerMail::send('submissionStatus', $submission);
+		// Email notification
+        // Call Http/Controllers/TriggerMail/TriggerMailController.php::submissionStatus
+        $text = [
+            'title' => 'Your claim is received!',
+            'message' => 'IT WILL BE VALIDATED WITHIN 2 BUSINESS DAYS AND YOU WILL RECEIVE AN EMAIL LETTING YOU KNOW IF IT HAS BEEN APPROVED. IN THE MEANTIME IF YOU HAVE ANY QUESTIONS PLEASE CONTACT US.',
+            'link' => '',
+            'linkText' => ''
+        ];
+		TriggerMail::send('submissionStatus', $submission, $text);
 
 		// If json returned - no alert is shown in scripts.js
 		/*return Response::json([

@@ -631,8 +631,14 @@ class ApiController extends Controller
 
             $submission->updateMeta($data);
 
-            // Email
-            TriggerMail::send('submissionStatus',$submission);
+            // Send email nitrification
+            $text = [
+                'title' => 'Your claim is approved!',
+                'message' => 'It is time to make a payment',
+                'link' => 'payform',
+                'linkText' => 'PAY HERE'
+            ];
+            TriggerMail::send('submissionStatus', $submission, $text);
         }
 
         if (request()->ids == 'all') {
@@ -968,7 +974,6 @@ class ApiController extends Controller
 
         return $json;
     }
-
 
     public function tracking_bulk()
     {

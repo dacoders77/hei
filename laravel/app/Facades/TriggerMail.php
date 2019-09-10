@@ -2,6 +2,7 @@
 
 namespace App\Facades;
 
+use App\Classes\LogToFile;
 use App\Http\Controllers\TriggerMail\TriggerMailController as TriggerMailController;
 
 class TriggerMail
@@ -12,11 +13,13 @@ class TriggerMail
      *
      * @param $method
      * @param array $args
+     * @param array @text
      * @return mixed
      */
-	public static function send($method,$args=[])
+	public static function send($method, $args=[], $text=[])
 	{
-		$class = new TriggerMailController();
+		$class = new TriggerMailController($text);
+		// TriggerMailController->submissionStatus($args)
 		return $class->$method($args);
 	}
 }
