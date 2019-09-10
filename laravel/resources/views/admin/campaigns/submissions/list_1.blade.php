@@ -54,7 +54,6 @@
   </div>
 
   <div class="row">
-    <h1>trace 67652 list_1.blade.php</h1>
     @foreach ([getStatus(5)] as $status)
       @php
         $statusCount = \Submission::where('campaign_id',1)
@@ -573,9 +572,8 @@
   {{--DATA TABLES OUTPUT!!!--}}
   @foreach($sections as $section)
     @php
-    dump($section);
+    /*dump($section);*/
     @endphp
-    <h2>trace list_1.blade.php 676621</h2>
     @include('admin.campaigns.submissions.data_table', $section)
   @endforeach
 

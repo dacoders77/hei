@@ -120,7 +120,6 @@
         </style>
 
           <!-- Data tables source feed via route: campaigns_datatable_submissions -->
-          <h4>data_table.blade.php {{ route('ajax.api','campaigns_datatable_submissions') }}</h4>
         <table id="submissions-{{ $id }}" class="table table-bordered table-striped" data-table="ajax" data-url="{{ route('ajax.api','campaigns_datatable_submissions') }}" data-filters="#submissions-filters-{{ $id }}" data-orderIndex="{{ $order_index }}" data-page-length="20">
               <thead>
                 <tr>
