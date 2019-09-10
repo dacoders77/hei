@@ -61,7 +61,7 @@ Route::group(['namespace' => 'Campaigns'], function() {
 
 
             /**
-             * @TODO DELETE! TEST ROUTES! Add everthing to config/campaigns.php
+             * @TODO 10.09.19 DELETE! TEST ROUTES! Add everthing to config/campaigns.php
              */
             Route::get('/payform', function () {
                 return view('campaigns.pages.stripe');
@@ -78,12 +78,19 @@ Route::group(['namespace' => 'Campaigns'], function() {
                             "description" => "Test payment."
                         ));
                     Session::flash ( 'success-message', 'Payment done successfully ! message from:' . __FILE__ );
-                    return view('campaigns.pages.info', [
+
+                    $text = [
                         'title' => 'Your payment has been processed',
-                        'message' => 'Thank you for making your payment. Your payment will show up on your card from VCGPromorisk Pty Ltd within the next 72 working hours and you will receive your UE BLAST speaker within 28 business days. You will receive one final message from us when your speaker is shipped to your nominated address.']);
+                        'message' => 'Thank you for making your payment. Your payment will show up on your card from VCGPromorisk
+                         Pty Ltd within the next 72 working hours and you will receive your UE BLAST speaker within 28 business days. 
+                         You will receive one final message from us when your speaker is shipped to your nominated address.',
+                        'link' => '',
+                        'linkText' => ''
+                    ];
+                    return view('campaigns.pages.info', ['text' => $text]);
+
                 } catch ( \Exception $e) {
                     Session::flash ( 'fail-message', "Error! Please Try again." );
-                    //return Redirect::back ();
                     return('Payment not done ' . __FILE__ . ' ' . $e);
                 }
             });

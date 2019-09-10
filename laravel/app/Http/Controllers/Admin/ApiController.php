@@ -635,7 +635,7 @@ class ApiController extends Controller
             $text = [
                 'title' => 'Your claim is approved!',
                 'message' => 'It is time to make a payment',
-                'link' => 'payform',
+                'link' => 'http://95.179.169.163/payform', /* @todo fix the host! 10.09.19 demo only!*/
                 'linkText' => 'PAY HERE'
             ];
             TriggerMail::send('submissionStatus', $submission, $text);
